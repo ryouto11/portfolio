@@ -1,0 +1,78 @@
+@media (max-width: 767px) {
+
+.container {
+    width: 90%;
+}
+
+header {
+    margin-top: 40px;
+}
+.header-left {
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+.nav {
+    display: none;
+}
+
+.table td {
+    width: 50%;
+    height: 2em;
+    border: solid 1px #d9d9d9;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+}
+
+.table a {
+    letter-spacing: 2px;
+    display: block;
+}
+
+.table {
+    display: block;
+    padding-top: 10px;
+}
+
+.contents {
+    display: block;
+    text-align: center;
+}
+
+.myphoto  {
+   display: none;
+}
+#about-contents{
+    flex-direction: column;
+}
+.about-text {
+    width:100%;
+}
+.main-text {
+    margin: 0 auto;
+    padding-top: 20px;
+    width:100%;
+
+}
+.maintext{
+    width:100%;
+}
+.about-skills{
+    width:100%;
+}
+#work-contents{
+    flex-direction: column;
+    gap:50px;
+}
+#work-contents .works{
+    width:100%;
+}
+footer .nav{
+    display: flex;
+    justify-content: center;
+}
+footer .nav ul li{
+    padding: 0 10px;
+}
+
+}

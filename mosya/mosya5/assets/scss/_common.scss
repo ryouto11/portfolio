@@ -1,0 +1,89 @@
+@import "./_mixin.scss";
+
+/*********************************************/
+/*               Google Fonts                */
+/*********************************************/
+
+/*********************************************/
+/*                    SCSS                   */
+/*********************************************/
+body {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium",
+    "游ゴシック", "Yu Gothic", "Noto Sans JP", sans-serif;
+  overflow-x: hidden;
+}
+.for {
+  &Sp {
+    display: none;
+  }
+  &Pc {
+    display: block;
+  }
+}
+
+.section-title{
+  font-size: 6rem;
+  margin-bottom: 4.5rem;
+  border-bottom:1px solid #CCCCCC;
+  display: inline-block;
+  @media (max-width: 767px){
+    font-size: 3.2rem;
+  }
+}
+section{
+  text-align: center;
+  max-width: 74rem;
+  margin:0 auto;
+}
+h1,h2,h3,p,li,a,span{
+  color:white;
+}
+
+.slide-in{
+  opacity: 0;
+  transform: translateY(50%);
+  transition: 1.5s;
+}
+.slide-in-active{
+  opacity: 1;
+  transform: translate(0);
+}
+/*********************************/
+/*            PC Base            */
+/*********************************/
+.header {
+  display: flex;
+  align-items: center;
+
+  &-logo {
+    &__image {
+    }
+  }
+
+  &-links {
+    &__link {
+    }
+  }
+}
+
+
+/*********************************/
+/*         PC Responsive         */
+/*********************************/
+
+@media (min-width: 769px) and (max-width: 1279px) {
+}
+
+/*********************************/
+/*               SP              */
+/*********************************/
+@media (max-width: 768px) {
+  .for {
+    &Sp {
+      display: block;
+    }
+    &Pc {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,249 @@
+@charset "UTF-8";
+html{
+    font-size: 100%;
+}
+body{
+    line-height: 150%;
+    font-size:0.9rem;
+    font-family: 'Noto Sans', 'Noto Sans JP',  sans-serif;
+    padding-top:150px;
+}
+img{
+    max-width: 100%;
+}
+.wrapper{
+    max-width: 1200px;
+    padding:0 16px;
+    margin: 0px auto;
+    font-size:0.9rem;
+}
+.pickup-title{
+    font-size: 1.0rem;
+    font-weight: bold;
+}
+.main-section-title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 15px;
+    
+}
+.side-and-footer-section-title{
+    font-size:1.1rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+.read-more{
+    line-height: 100%;
+    margin-bottom: 30px;
+}
+
+.read-more a {
+  position: relative;
+  display: inline-block;
+}
+.read-more a::before {
+  /*位置を決める*/
+  position: absolute; 
+  bottom: -3px;
+  left: 0;
+  /*何もないものを入れる*/
+  content: '';
+  /*アンダーラインを制作する*/
+  width: 100%;
+  height: 1px;
+  background: #333;
+  /*動的要素が加わった場合2秒かけて変化するようにする*/
+  transition: all .2s ease;
+}
+.read-more a:hover::before {
+    /*ホバーした場合３px下に移動させる*/
+  transform: translateY(3px);
+  /*消す*/
+  opacity: 0;
+  visibility: hidden;
+}
+.read-more-box{
+    text-align: center;
+}
+
+#header{
+    background-color: white;
+    width:100%;
+    position: fixed;
+    top:0;
+    z-index:100;
+}
+#header #logo{
+    max-width: 1200px;
+    padding:0 16px;
+    margin:20px auto;
+}
+#header #nav-background{
+    background-color: #333;
+    height: 40px;
+}
+#header nav ul{
+    display: flex;
+    max-width: 1200px;
+    margin:0 auto;
+    padding:0 16px;
+    line-height: 40px;
+}
+#header nav ul li{
+    color:white;
+}
+#header nav ul li{
+    padding-right: 60px;
+}
+
+
+#pickup{
+    margin-bottom: 50px;
+}
+#pickup ul{
+    display: flex;
+    justify-content: space-between;
+}
+#pickup ul li{
+    width:32%;
+}
+#pickup ul li h3{
+    margin:20px 0 25px 0;
+}
+
+
+#all-area{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 120px;
+}
+
+
+#main-area{
+    width: 65%;
+}
+#main-area article:not(:last-child){
+    margin-bottom: 50px;
+}
+#main-area .data{
+    display: flex;
+    margin-bottom: 5px;
+}
+#main-area .data .category{
+    margin-left: 10px;
+}
+#main-area img{
+    margin-bottom: 15px;
+}
+#main-area .main-text{
+    width:90%;
+    margin:0 auto 30px auto;
+}
+
+
+#side-area{
+    width:31.5%;
+}
+#side-area #self-img-box{
+    margin-bottom: 20px;
+}
+#side-area #self-img{
+    width:130px;
+    height:130px;
+    border-radius: 50%;
+}
+#side-area #introduction{
+    margin-bottom: 60px;
+}
+#side-area #introduction :not(p){
+    text-align: center
+}
+#side-area .side-and-footer-section-title{
+    text-align: center;
+}
+#side-area #ranking .ranking-list li{
+    margin-bottom: 20px;
+}
+#side-area #archive li{
+    border-bottom: solid 1px black;
+    padding: 19px 10px;
+}
+#side-area #archive .first-li{
+    border-top: solid 1px black;
+}
+
+
+
+#footer{
+    background-color: #f7f7f7;
+}
+footer p,li{
+    font-size: 0.8rem;
+}
+#footer-wrapper{
+    display: flex;
+    justify-content:space-between;
+    margin-bottom: 60px;
+}
+#footer-wrapper section{
+    width:30%;
+    padding-top: 60px;
+}
+#footer-wrapper #footer-about p{
+    margin-bottom: 10px;
+}
+#footer-wrapper #footer-about li .triangle{
+    display: inline-block;
+    width:0px;
+    height: 0px;
+    border-top: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 7px solid black;
+    
+}
+#footer-wrapper #footer-menu li{
+    border-bottom: solid 1px black;
+    padding: 13px 15px;
+}
+#footer-wrapper #footer-menu .first-li{
+    border-top: solid 1px black;
+}
+#footer #copy-right{
+    text-align: center;
+    padding-bottom: 8px;
+}
+
+@media screen and (max-width:768px){
+    #header nav ul li:last-child{
+        padding-right: 20px;
+    }
+    nav{
+        overflow-x: auto;
+    }
+    #pickup ul{
+        flex-direction: column;
+    }
+    #pickup ul li{
+        width:100%;
+    }
+    #all-area{
+        flex-direction: column;
+    }
+    #main-area{
+        width: 100%;
+    }
+    #side-area{
+        width: 100%;
+    }
+    #footer-wrapper{
+        flex-direction: column;
+        margin-bottom: 90px;
+        
+    }
+    #footer-wrapper section{
+        width:100%;
+        padding-top: 40px;
+    }
+}

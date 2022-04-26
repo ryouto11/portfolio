@@ -1,0 +1,409 @@
+@import "./_common.scss";
+
+/*********************************/
+/*            PC Base            */
+/*********************************/
+html {
+  font-size: 10px;
+}
+body{
+  font-family: 'Hiragino Kaku Gothic ProN',sans-serif;
+  background-color: #121212;
+}
+*{
+  box-sizing: border-box;
+}
+
+.header{
+  display: none;
+  padding:0 4rem;
+  position: fixed;
+  z-index: 1;
+  width:100%;
+  &_logo{
+    position: relative;
+    width:14rem;
+    height:auto;
+    margin:3.5rem 0;
+    z-index: 999999;
+  }
+  &_hamburger {
+    display: block;
+    position: absolute;
+    z-index: 999999;
+    top:3.5rem;
+    right:3.5rem;
+    transform: translateY(-50%);
+    width: 3rem;
+    height: 2rem;
+    div {
+    display: block;
+    width: 100%;
+    height: 0.1rem;
+    background: white;
+    position: absolute;
+    transition: all 0.7s;
+    top:50%;
+    left: 50%;
+    transform-origin: 50% 50%;
+    transform: translate(-50%,-50%);
+    &:nth-child(1) {
+    transform: translate(-50%,-1.1rem);
+    // 実際離れてるのは0.8remだ
+    }
+    &:nth-child(3) {
+    transform: translate(-50%,0.9rem);
+    // 半身１つ目より下にいるため、一つ目より半身分移動距離を減らす
+    }
+    }
+    }
+    
+    &_hamburger.active {
+    z-index: 999999;
+    div:nth-of-type(1) {
+    transform:translate(-50%,0rem) rotate(-45deg);
+    background-color: white;
+    }
+    div:nth-of-type(2) {
+      transform:translate(-50%,0rem) rotate(45deg);
+    }
+    div:nth-of-type(3) {
+    transform:translate(-50%,0rem) rotate(45deg);
+    background-color: white;
+    }
+    }
+    // モーダル
+    &_modal-content {
+    position: fixed;
+    z-index: 99999;
+    width:100%;
+    background-color: #121212;
+    padding:9rem 0 3rem 0;
+    transition: 0.7s;
+    top:0;
+    right:0;
+    transform: translateY(-100%);
+    }
+    .header_slide-in-top{
+    transform: translateY(0);
+    }
+    &_modal-menu-list{
+      li{
+        text-align: center;
+        margin-bottom: 2rem;
+        a{
+          color:white;
+        }
+      }
+    }
+    
+}
+main{
+  .side-btn{
+    
+      transform: translateX(100%);
+      transition: 0.5s;
+      display: flex;
+      position: fixed;
+      right:0;
+      bottom:20%;
+      writing-mode: vertical-lr;
+      z-index: 1;
+
+      a{
+        color:white;
+        display: inline-block;
+        width:4.6rem;
+        height:16.5rem;
+        text-align: center;
+        line-height: 4.6rem;
+        border: 1px solid white;
+        border-left-style:none;
+        font-size: 1.4rem;
+        transform: rotate(180deg);
+        &:hover{
+          color:rgba($color: #ffffff, $alpha: 0.7)
+        }
+  
+        &:first-child{
+          border-top-style: none;
+        }
+      }
+      @media (max-width: 767px){
+        display: none;
+      }
+    }
+  .side-btn-active{
+    transform: translateX(0);
+  }
+  .main-visual{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    div{
+      width:calc(100% / 3);
+      flex-shrink:0;
+      height:100vh;
+      @media (max-width: 900px){
+        width:100%;
+      }
+    }
+  }
+
+  .message{
+    margin:10rem 0;
+    h2{
+      font-size: 10rem;
+      text-align: center;
+      color:white;
+      line-height: 13rem;
+      @media (max-width: 767px){
+        font-size: 4.8rem;
+        line-height:7.8rem;
+      }
+    }
+  }
+  .information{
+    margin-bottom: 14rem;
+    p{
+      text-align: center;
+      &:nth-child(2){
+        font-size: 2.4rem;
+        @media (max-width: 767px){
+          font-size: 1.6rem;
+        }
+      }
+      &:nth-child(3),
+      &:nth-child(5){        
+        font-size: 1.8rem;
+        @media (max-width: 767px){
+          font-size: 1.6rem;
+        }
+      }
+      &:nth-child(4){
+        font-size: 4rem;
+        font-weight: bold;
+        margin:2rem 0;
+        @media (max-width: 767px){
+          font-size: 3.2rem;
+        }
+      }
+    }
+  }
+
+  .gallery{
+    transition: 0.5s;
+    // opacityをjsで0にした時のスピード設定
+    @media (max-width: 767px){
+      padding:0 3rem;
+    }
+    div{
+      width:35.5rem;
+      &:not(:last-child){
+        margin-bottom: 6rem;
+        @media (max-width: 767px){
+          margin-bottom: 3rem;
+        }
+      }
+      &:nth-child(2n+1){
+        margin-left: auto;
+      }
+      &:nth-child(2){
+        height:48.8rem;
+        @media (max-width: 767px){
+          height: auto;
+        }
+      }
+      &:nth-child(3){
+        height:23.5rem;
+        @media (max-width: 767px){
+          height: auto;
+        }
+      }
+      &:nth-child(4){
+        height:35.5rem;
+        @media (max-width: 767px){
+          height: auto;
+        }
+      }
+      &:nth-child(5){
+        height:53.3rem;
+        @media (max-width: 767px){
+          height: auto;
+        }
+      }
+      &:nth-child(6){
+        height:44.4rem;
+        @media (max-width: 767px){
+          height: auto;
+        }
+      }
+      &:nth-child(7){
+        height:23.5rem;
+        @media (max-width: 767px){
+          height: auto;
+        }
+      }
+      @media (max-width: 767px){
+        width:100%;
+      }
+    }
+  }
+  .access{
+    text-align: center;
+    position: relative;
+    max-width:100%;
+    padding:48rem 0;
+
+    @media (max-width: 767px){
+      padding:28rem 0;
+    }
+    &_back{
+      display: none;
+      position: fixed;
+      top:0;
+      left:0;
+      bottom:0;
+      right:0;
+      z-index:-1;
+      opacity:0.5;
+    }
+    &_contents{
+      p{
+        font-size: 1.6rem;
+        &:nth-child(1){
+          font-size: 2.8rem;
+          font-weight: bold;
+        }
+        &:nth-child(2){
+          margin:2rem 0;
+        }
+      }
+    }
+    &_btn{
+      border: 1px solid white;
+      padding:1.5rem 8.2rem;
+      margin-top: 4.5rem;
+      display: inline-block;
+      transition: 0.3s;
+      &:hover{
+        background-color: #121212;
+      }
+      span{
+        color:white;
+        font-size: 1.6rem;
+      }
+    }
+  }
+  .contact{
+    margin-bottom: 20rem;
+    padding:0 3rem;
+    &_btn{
+      display:block;
+      border: 1px solid white;
+      max-width:40rem;
+      height: 7.6rem;
+      margin: 0 auto;
+      margin-bottom: 2rem;
+      position: relative;
+      transition: 0.3s;
+      &:hover{
+        opacity: 0.7;
+        .contact_btn--arrow{
+          transform: translateX(1rem);
+        }
+      }
+      &--arrow{
+        position: absolute;
+        height:1px;
+        width:12rem;
+        background-color: white;
+        top:4.6rem;
+        right:-4rem;
+        transition:0.3s;
+
+        &::before{
+          content: "";
+          position: absolute;
+          height: 1px;
+          width:1.5rem;
+          background-color:white;
+          right:0;
+          transform-origin: 100%;
+          transform: rotate(30deg);
+        }
+        @media (max-width: 767px){
+          display: none;
+        }
+      }
+      span{
+        font-size: 1.6rem;
+        line-height: 7.6rem;
+      }
+    }
+  }
+  .footer{
+    border-top: 1px solid white;
+    padding:8rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @media (max-width: 767px){
+      padding:6rem 3rem;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &_left-contents{
+      p{
+        line-height: 1.2rem;
+      }
+      p:nth-child(4){
+      margin:1rem 0 3rem 0;
+    }
+    }
+    &_sns-list{
+      display: flex;
+      gap:1.5rem;
+      @media (max-width: 767px){
+        margin-bottom: 3rem;
+      }
+    }
+    &_right-contents{
+      display: flex;
+      gap:3rem;
+    }
+  }
+
+
+
+
+}
+
+
+/*********************************/
+/*        PC Responsive 1        */
+/*********************************/
+@media (min-width: 769px) and (max-width: 1279px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+/*********************************/
+/*        PC Responsive 2        */
+/*********************************/
+@media (min-width: 769px) and (max-width: 1279px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+/*********************************/
+/*              SP 1             */
+/*********************************/
+@media (max-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+}

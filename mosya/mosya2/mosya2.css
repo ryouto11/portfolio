@@ -1,0 +1,176 @@
+@charset "UTF-8";
+
+body{
+    
+    font-size:100%;
+}
+img{
+    max-width: 100%;
+}
+.wrapper{
+    max-width: 960px;
+    padding:0 4%;
+    margin: 0px auto 150px auto;
+    text-align: center;
+    font-size:0.9rem;
+}
+h1{
+    font-size: 1.7rem;
+}
+.section-title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 60px;
+}
+
+#header {
+    margin: 123px auto;
+    display: flex;
+    justify-content: space-between;
+}
+#header ul{
+    display:flex;
+}
+#header ul li:hover{
+    opacity: 0.6;
+}
+#header ul li:not(:first-child){
+    margin-left: 30px;
+}
+#header ul li .size{
+    font-size: 1.4rem;
+}
+
+#main-visual{
+    display: block;
+    margin-bottom: 80px;
+}
+#main-visual img{
+    height: 420px;
+    width: 100%;
+    object-fit: cover; 
+}
+#about-contents{
+    text-align: left;
+}
+#about-contents p:not(:last-child){
+    padding-bottom: 30px;
+}
+
+#works ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#works ul li{
+    width:31%;
+}
+#works ul li:nth-child(n+4) {
+  margin-top: 30px;
+}
+
+#news dl{
+    display: flex;
+    padding:15px 0px 15px 15px;
+    border-bottom: solid 1px #CCCCCC;
+}
+#news dt{
+    font-weight: normal;
+}
+#news dd{
+    padding-left: 70px;
+    text-align: left;
+}
+#first-dl{
+    border-top:solid 1px #CCCCCC;
+}
+
+#contact .contact-wrapper{
+    display: flex;
+    width:100%;
+}
+#contact p{
+    width:15%;
+    text-align: left;
+}
+.text-form{
+    border: 1px solid #CCCCCC;
+    width:85%;
+    height: 40px;
+    margin-bottom: 10px;
+    text-align: left;
+    padding-left:10px;
+    outline: none;
+}
+.textlines{
+    border: 1px solid #CCCCCC;
+    width:85%;
+    height: 150px;
+    text-align: left;
+    padding-left:10px;
+    resize:vertical;
+    outline: none;
+}
+
+#submit{
+    margin-top:40px;
+    padding:15px 85px;
+    color:white;
+    background-color:black;
+    border:1px solid black;
+}
+#submit:hover{
+    background-color: white;
+    color:black;
+}
+
+footer{
+    text-align: center;
+    background-color: black;
+    color:white;
+    padding:6px 0;
+}
+footer p{
+    color:white;
+    font-size: 0.6rem;
+}
+
+@media screen and (max-width:600px){
+    .wrapper{
+        margin-bottom: 70px;
+    }
+    #header{
+        flex-direction: column;
+        align-items: center;
+        margin: 25px auto 15px auto;
+    }
+    #header h1{
+        padding-bottom: 15px;
+    }
+    #works ul{
+        flex-direction:column;
+    }
+    #works ul li{
+        width:100%;
+    }
+     #works ul li:not(:first-child){
+         margin-top: 30px;
+    }
+    #news dl{
+        flex-direction:column;
+    }
+    #news dt{
+        text-align: left;
+    }
+    #news dd{
+        padding-left: 0;
+    }
+    #contact .contact-wrapper{
+        flex-direction: column
+    }
+    #contact p,
+    #contact .text-form,
+    #contact .textlines{
+        width:100%;
+    }
+}
