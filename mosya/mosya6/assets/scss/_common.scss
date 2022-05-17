@@ -1,0 +1,162 @@
+@import "./_mixin.scss";
+$main-color:#00FFF5;
+/*********************************************/
+/*               Google Fonts                */
+/*********************************************/
+
+/*********************************************/
+/*                    SCSS                   */
+/*********************************************/
+body {
+  font-family:"Exo",'Noto Sans JP';
+  overflow-x: hidden;
+  font-size: 10px;
+}
+
+
+/*********************************/
+/*            PC Base            */
+/*********************************/
+.header {
+  display: flex;
+  align-items: center;
+}
+.section-title{
+  font-size: 8rem;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.5rem;
+  @media screen and (max-width:768px){
+    font-size: 5rem;
+    letter-spacing: 0.3rem;
+  }
+  &::after{
+    content: "";
+    position: absolute;
+    width:8rem;
+    height:1rem;
+    background-color: $main-color;
+    left:0;
+    bottom:-3rem;
+    @media screen and (max-width:768px){
+      height:0.5rem;
+      width:6rem;
+      bottom:-1.5rem;
+    }
+  }
+}
+.btn {
+  background-color: $main-color;
+  padding: 2rem 6.4rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  box-sizing: border-box;
+  letter-spacing: 0.1rem;
+  display: inline-block;
+  &:hover{
+    box-shadow: 0px 0px 20px 1px $main-color;
+  }
+}
+
+.bg-line{
+  position: absolute;
+  top:-4rem;
+  right: 0;
+  display: flex;
+  width:29.8%;
+  height:4.1rem;
+  overflow: hidden;
+  @media screen and (max-width:768px){
+    width:53%;
+    top:-3rem;
+    height: 3.1rem;
+  }
+  span{
+    &:nth-child(1){
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 50px 40px 0px 0;
+      border-color: transparent #000000 transparent transparent;
+      flex-shrink: 0;
+      transform: translate(0.1rem,-0.3rem);
+      @media screen and (max-width:768px){
+        border-width: 40px 40px 0px 0;
+      }
+      
+    }
+    &:nth-child(2){
+      display:block;
+      width:calc(100% - 40px);
+      height:100%;
+      background-color: #000000;
+      flex-grow: 1;
+      @media screen and (max-width:768px){
+
+      }
+    }
+
+  }
+}
+.bg-line-bottom{
+  position: absolute;
+  left: 0;
+  bottom:-4rem;
+  display: flex;
+  width: 29.8%;
+  height:4.1rem;
+  overflow: hidden;
+  transform: rotate(180deg);
+  @media screen and (max-width:768px){
+    width:51.2%;
+    bottom:-3rem;
+    height: 3.1rem;
+  }
+  span{
+    &:nth-child(1){
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 50px 40px 0px 0;
+      border-color: transparent #000000 transparent transparent;
+      flex-shrink: 0;
+      transform: translate(0.1rem,-0.3rem);
+      @media screen and (max-width:768px){
+        border-width: 40px 40px 0px 0;
+      }
+      
+    }
+    &:nth-child(2){
+      display:block;
+      width:calc(100% - 60px);
+      height:100%;
+      background-color: #000000;
+      flex-grow: 1;
+    }
+
+  }
+}
+
+/*********************************/
+/*         PC Responsive         */
+/*********************************/
+
+@media (min-width: 769px) and (max-width: 1279px) {
+}
+
+/*********************************/
+/*               SP              */
+/*********************************/
+@media (max-width: 768px) {
+  .for {
+    &Sp {
+      display: block;
+    }
+    &Pc {
+      display: none;
+    }
+  }
+}

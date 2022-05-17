@@ -1,0 +1,50 @@
+@import "./_mixin.scss";
+
+/*********************************************/
+/*                   fade in                 */
+/*********************************************/
+/* →上からくる動作 */
+.fadein_top {
+  transform: translateY(-20%);
+  opacity: 0;
+  transition: opacity 2s, transform 1s;
+}
+/*  →左からくる動作 */
+.fadein_left {
+  transform: translateX(-20%);
+  opacity: 0;
+  transition: opacity 2s, transform 1s;
+}
+/* →右からくる動作 */
+.fadein_right {
+  transform: translateX(20%);
+  opacity: 0;
+  transition: opacity 2s, transform 1s;
+}
+/* →下からくる動作 */
+.fadein_bottom {
+  transform: translateY(20%);
+  opacity: 0;
+  transition: opacity 2s, transform 1s;
+}
+/* ②の１、に対して： */
+.top_in_active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+.left_in_active {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+.right_in_active {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+.bottom_in_active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}

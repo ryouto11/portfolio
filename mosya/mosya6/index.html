@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+
+    <!-- サイト情報 -->
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>mosya6</title>
+    <meta name="description" content="説明文が入ります" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/img/index/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/img/index/apple-touch-icon-180x180.png"
+    />
+
+    <!-- GoogleFonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;500;700&family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/111ed88bdd.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- style sheets -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.min.css" />
+  </head>
+
+  <body>
+    <div class="loading">
+      <div class="atom-spinner">
+        <div class="spinner-inner">
+          <div class="spinner-line"></div>
+          <div class="spinner-line"></div>
+          <div class="spinner-line"></div>
+          <!--Chrome renders little circles malformed :(-->
+          <div class="spinner-circle">
+            &#9679;
+          </div>
+        </div>
+      </div>
+      <p>Loading</p>
+    </div>
+
+    <header class="header">
+      <div class="header_left">
+        <h1>
+          <a onclick="window.location.reload(true);">
+            <img src="./assets/img/index/Necopon games.png" alt="タイトル" />
+          </a>
+        </h1>
+      </div>
+      <div class="header_right">
+        <div class="header_menu">
+          <nav>
+            <li><a href="#story">STORY</a> </li>
+            <li><a href="#trailer">TRAILER</a> </li>
+          </nav>
+          <a class="header_btn btn" href="#">PLAY NOW</a>
+        </div>
+      </div>
+      <span id="music-btn">
+        <p>SOUND OFF</p>
+        <div>
+          <img src="./assets/img/index/Vector.png" alt="">
+        </div>
+      </span> 
+
+
+      <audio id="sound" preload="auto">
+        <source src="./assets/audio/cinematic-melody-main-9785.mp3" type="audio/mp3">
+      </audio>
+
+    </header>
+
+    <main id="index">
+      <div class="mainvisual">
+        <div class="mainvisual_bg">
+          <video src="./assets/video/bg_movie.mp4" loop muted autoplay></video>
+        </div>
+        <div class="mainvisual_main-text">
+          <p>VR GAME</p>
+          <p>
+            Planet<br />
+            Hunters
+          </p>
+          <p>惑星を奪還せよ</p>
+          <a class="btn" href="#">PLAY NOW</a>
+        </div>
+        <div class="mainvisual_scroll-var">
+          <p>Scroll</p>
+          <div class="mainvisual_scroll-var--line"></div>
+        </div>
+
+        <div class="mainvisual_news">
+          <dl>
+            <dt>2030.02.20</dt>
+            <dd>バージョン5.6リリース：アバター・アイテム大量追加</dd>
+          </dl>
+        </div>
+      </div>
+
+      <section class="story" id="story">
+        <div class="story_bg-line-top-black bg-line">
+          <span></span>
+          <span></span>
+        </div>
+        <div class="story_bg">
+          <img src="./assets/img/index/bg_story.png" alt="" />
+        </div>
+        <div class="story_contents">
+          <div class="story_contents-top">
+            <div class="story_contents-top--text">
+              <div>
+                <h2 class="section-title">STORY</h2>
+              </div>
+              <h3>
+                奪われた故郷の星を取り戻せ<br />
+                壮大なSFファンタジー
+              </h3>
+              <p>
+                銀河歴222年、惑星ネコチャンは、ボスネコ将軍の率いる軍の反乱により完全に制圧された。将軍の側近マンチカンは軍政府に従わない人間を辺境の星ニャゴーへ強制的に追放。食料や資源の乏しいニャゴーでは多くの難民が発生し飢餓に苦しんでいた。ニャゴーのスラム街で育った孤児の姉弟がいた。姉のミケと弟のタマは母親をボスネコ将軍に殺された事実を知る。母の復讐のため、そして故郷の惑星ネコチャンを奪還すべく、ミケとタマはいま行動に出る!
+              </p>
+            </div>
+            <div class="story_contents-top--img">
+              <img src="./assets/img/index/story.png" alt="" />
+            </div>
+          </div>
+          <div class="story_contents-bottom">
+            <div class="story_contents-bottom--img">
+              <img src="./assets/img/index/story2.png" alt="" />
+            </div>
+            <div class="story_contents-bottom--text">
+              <h3>
+                隠された陰謀を暴け<br />
+                衝撃的な事実に驚愕
+              </h3>
+              <p>
+                ミケとタマはネコジャラシ作戦により軍政府の最新鋭の小型船チュールを奪うことに成功。チュールのハイテンションワープ星間航行により惑星ネコチャンへあとわずか３時間で到着という時、小惑星帯アビシニアンで謎の救難信号を受信する。意外にも信号の発信源はボスネコ将軍だった。彼は今にも絶えそうなかすれた声で「私はおまえたちミケとタマの父親なのだ」と語る。その瞬間、ミケとタマの育ての親同然で仲間のはずのホワイトオッドアイがタマの背中を刀で切り裂いたのだった......
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="story_bg-line-bottom-black bg-line-bottom">
+          <span></span>
+          <span></span>
+        </div>
+      </section>
+      <div class="cta">
+        <div class="cta_contents">
+          <p>ARE YOU READY TO FIGHT?</p>
+          <a class="btn" href="#">PLAY NOW</a>
+        </div>
+      </div>
+      <section class="trailer" id="trailer">
+        <div class="trailer_bg-line-top-skyblue bg-line">
+          <span></span>
+          <span></span>
+        </div>
+        <div class="trailer_contents">
+          <h2 class="section-title">
+            TRAILER
+          </h2>
+          <div class="trailer_youtube">
+            <iframe src="https://www.youtube.com/embed/RO_RRKTYzUY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="trailer_bg-line-bottom-skyblue bg-line-bottom">
+          <span></span>
+          <span></span>
+        </div>
+      </section>
+      <div class="cta">
+        <div class="cta_contents">
+          <p>ARE YOU READY TO FIGHT?</p>
+          <a class="btn" href="#">PLAY NOW</a>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="footer">
+      <div class="bg-line">
+        <span></span>
+        <span></span>
+      </div>
+      <div class="footer_sns">
+        <img src="./assets/img/index/sns-btns 1.png" alt="">
+      </div>
+      <div class="footer_copy-right">
+        <p>©Necopon games</p>
+      </div>
+    </footer>
+    <div class="play-btn">
+      <a class="btn" href="#">PLAY NOW</a>
+    </div>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <!-- common js -->
+    <script src="./assets/js/common.js"></script>
+
+    <!--各ページ固有のjsを読み込む-->
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>

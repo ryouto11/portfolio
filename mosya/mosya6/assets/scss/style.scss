@@ -1,0 +1,776 @@
+@import "./_animation.scss";
+@import "./_common.scss";
+$main-color:#00FFF5;
+
+/*********************************/
+/*            PC Base            */
+/*********************************/
+html {
+  font-size: 10px;
+}
+
+body {
+  width: 100%;
+  // ローディング中のスクロール禁止
+  animation: disableScroll .1s linear 1.9s both;
+
+  @keyframes disableScroll {
+    0% {
+      overflow: hidden;
+    }
+
+    100% {
+      overflow: auto;
+    }
+  }
+
+  // ローディング画面
+  .loading {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    z-index: 10;
+
+    p {
+      color: $main-color;
+      position: absolute;
+      top: 56%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.8rem;
+      font-weight: 500;
+      letter-spacing: 0.1rem;
+    }
+  }
+
+  .atom-spinner,
+  .atom-spinner * {
+    box-sizing: border-box;
+  }
+
+  .atom-spinner {
+    height: 6rem;
+    width: 6rem;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .atom-spinner .spinner-inner {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+
+  .atom-spinner .spinner-circle {
+    display: block;
+    position: absolute;
+    color: $main-color;
+    font-size: calc(60px * 0.24);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .atom-spinner .spinner-line {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    animation-duration: 1s;
+    border-left-width: calc(60px / 25);
+    border-top-width: calc(60px / 25);
+    border-left-color: $main-color;
+    border-left-style: solid;
+    border-top-style: solid;
+    border-top-color: transparent;
+  }
+
+  .atom-spinner .spinner-line:nth-child(1) {
+    animation: atom-spinner-animation-1 1s linear infinite;
+    transform: rotateZ(120deg) rotateX(66deg) rotateZ(0deg);
+  }
+
+  .atom-spinner .spinner-line:nth-child(2) {
+    animation: atom-spinner-animation-2 1s linear infinite;
+    transform: rotateZ(240deg) rotateX(66deg) rotateZ(0deg);
+  }
+
+  .atom-spinner .spinner-line:nth-child(3) {
+    animation: atom-spinner-animation-3 1s linear infinite;
+    transform: rotateZ(360deg) rotateX(66deg) rotateZ(0deg);
+  }
+
+  @keyframes atom-spinner-animation-1 {
+    100% {
+      transform: rotateZ(120deg) rotateX(66deg) rotateZ(360deg);
+    }
+  }
+
+  @keyframes atom-spinner-animation-2 {
+    100% {
+      transform: rotateZ(240deg) rotateX(66deg) rotateZ(360deg);
+    }
+  }
+
+  @keyframes atom-spinner-animation-3 {
+    100% {
+      transform: rotateZ(360deg) rotateX(66deg) rotateZ(360deg);
+    }
+  }
+
+  // ローディング画面ここまで
+
+  .header {
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+    justify-content: space-between;
+    padding: 0 3rem;
+    height: 10rem;
+
+    @media screen and (max-width: 768px) {
+      height: 6rem;
+      padding: 0 2rem;
+    }
+
+    &_left {
+      h1 {
+        width: 17.2rem;
+
+        @media screen and (max-width:768px) {
+          width: 12.2rem;
+
+        }
+      }
+    }
+
+    &_menu {
+      display: flex;
+      gap: 2.75rem;
+
+      nav {
+        display: flex;
+        align-items: center;
+        gap: 2.6rem;
+
+        @media screen and (max-width: 768px) {
+          gap: 2rem;
+        }
+
+        li {
+          a {
+            color: $main-color;
+            font-size: 1.6rem;
+            font-weight: bold;
+            letter-spacing: 0.15rem;
+            &:hover{
+              text-shadow: 0px 0px 7px $main-color;
+            }
+
+            @media screen and (max-width:768px) {
+              font-size: 1.2rem;
+              letter-spacing: 0.05rem;
+            }
+          }
+        }
+      }
+    }
+
+    &_btn {
+      background-color: $main-color;
+      padding: 1.5rem 4rem;
+      font-weight: bold;
+      font-size: 1.5rem;
+      letter-spacing: 0.15rem;
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    #music-btn {
+      position: absolute;
+      display: flex;
+      padding: 3rem 0;
+      align-items: center;
+      right: 3.1rem;
+      bottom: -4rem;
+      color: #BFBFBF;
+      font-weight: bold;
+      font-size: 1.2rem;
+      cursor: pointer;
+
+      @media screen and (max-width:768px) {
+        bottom: -5.1rem;
+        right: 5%;
+      }
+
+      img {
+        width: 1.5rem;
+        padding-left: 1.1rem;
+      }
+    }
+
+    .sound-on {
+      color: white !important;
+
+      img {
+        filter: brightness(400%);
+      }
+    }
+  }
+
+  #index {
+    .mainvisual {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+
+      &_bg {
+        position: fixed;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+        overflow: hidden;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(to left top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.2) 50%);
+          background-size: 0.4rem 0.4rem;
+          z-index: 1;
+        }
+
+        video {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          min-width: 100%;
+          min-height: 100%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      &_main-text {
+        position: absolute;
+        top: 51%;
+        transform: translateY(-50%);
+        left: 16rem;
+
+        @media screen and (max-width:768px) {
+          top: 50%;
+          left: 10.5%;
+        }
+
+        p {
+          color: white;
+          font-weight: 600;
+          letter-spacing: .6rem;
+
+          @media screen and (max-width:768px) {
+            font-weight: 500;
+          }
+
+          &:nth-child(1) {
+            font-size: 3.2rem;
+            padding-left: 1rem;
+
+            @media screen and (max-width:768px) {
+              font-size: 2.2rem;
+              padding-left: 0.55rem;
+              letter-spacing: 0.5rem;
+            }
+          }
+
+          &:nth-child(2) {
+            padding: 3rem 0 1rem 0;
+            font-size: 14rem;
+            line-height: 12.5rem;
+
+            @media screen and (max-width:768px) {
+              line-height: 6.8rem;
+              font-size: 7.6rem;
+              padding-top: 1.7rem;
+              padding-bottom: 1.5rem;
+              letter-spacing: 0.4rem;
+            }
+          }
+
+          &:nth-child(3) {
+            font-size: 3.4rem;
+            letter-spacing: 3.4rem;
+            margin-bottom: 5rem;
+
+            @media screen and (max-width:768px) {
+              font-size: 2.2rem;
+              letter-spacing: 1.28rem;
+              margin-bottom: 3rem;
+            }
+          }
+        }
+
+        .btn {
+          @media screen and (max-width:768px) {
+            padding: 2.1rem 4.1rem;
+            letter-spacing: 0.13rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+          }
+        }
+      }
+
+      &_scroll-var {
+        position: absolute;
+        left: 1.9rem;
+        bottom: 2.1rem;
+        writing-mode: vertical-rl;
+
+        p {
+          color: $main-color;
+          margin-left: 1rem;
+          font-size: 1.3rem;
+          font-weight: bold;
+          text-align: center;
+
+          @media screen and (max-width:768px) {
+            margin-left: 1.3rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.02rem;
+            font-size: 1.25rem;
+          }
+        }
+
+        &--line {
+          height: 5rem;
+          width: 0.2rem;
+          background-color: $main-color;
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            width: 1rem;
+            height: 1rem;
+            background-color: $main-color;
+            border-radius: 100vh;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: scroll-down 2s infinite linear;
+          }
+
+          @keyframes scroll-down {
+            0% {
+              top: 0;
+            }
+
+            100% {
+              top: 100%;
+            }
+          }
+        }
+      }
+
+      &_news {
+        overflow: hidden;
+        position: absolute;
+        right: 3rem;
+        bottom: 4.9rem;
+        border: solid 1px $main-color;
+        width: 36rem;
+        height: 3.1rem;
+        background-color: black;
+        white-space: nowrap;
+
+        @media screen and (max-width:768px) {
+          width: 20rem;
+          height: 2.7rem;
+          right: 2rem;
+        }
+
+        @keyframes news {
+          0% {
+            transform: translateX(36rem);
+          }
+
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+
+        dl {
+          animation: news 15s linear infinite;
+          display: inline-block;
+
+          &>* {
+            font-weight: bold;
+            font-size: 1.4rem;
+            display: inline-block;
+            line-height: 3.1rem;
+            letter-spacing: 0.1rem;
+
+            @media screen and (max-width:768px) {
+              font-size: 1.2rem;
+              line-height: 2.7rem;
+            }
+          }
+
+          dt {
+            color: white;
+            margin-right: 2rem;
+          }
+
+          dd {
+            color: $main-color;
+          }
+        }
+      }
+    }
+
+    .story {
+      position: relative;
+
+      &_bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      &_contents {
+        max-width: 111.6rem;
+        margin: 0 auto;
+        padding: 13rem 4rem 12.7rem 4rem;
+        overflow: hidden;
+
+        @media screen and (max-width:768px) {
+          padding: 5rem 2rem 4.3rem 2rem;
+        }
+      }
+
+      &_contents-top {
+        display: flex;
+        align-items: center;
+        column-gap: 8rem;
+        margin-bottom: 9.3rem;
+        width: 100%;
+
+        @media screen and (max-width:768px) {
+          flex-direction: column;
+          margin-bottom: 0;
+        }
+
+        &--text {
+          width: 53.7%;
+          flex-shrink: 1;
+
+          @media screen and (max-width:768px) {
+            width: 100%;
+          }
+
+          h2 {
+            color: $main-color;
+          }
+
+          h3,
+          p {
+            color: white;
+          }
+
+          h3 {
+            letter-spacing: 0.2rem;
+            font-size: 3.2rem;
+            margin: 7rem 0 3rem 0;
+            line-height: 150%;
+
+            @media screen and (max-width:768px) {
+              margin-top: 4.8rem;
+              font-size: 2.4rem;
+              letter-spacing: 0.14rem;
+              font-family: "Noto Sans JP";
+              line-height: 125%;
+              font-weight: bold;
+            }
+          }
+
+          p {
+            line-height: 180%;
+            letter-spacing: 0.1rem;
+            font-size: 1.6rem;
+
+            @media screen and (max-width:768px) {
+              font-size: 1.5rem;
+              letter-spacing: 0.092rem;
+            }
+          }
+        }
+
+        &--img {
+          transform: skew(-6deg, 0deg);
+          flex-shrink: 1;
+
+          @media screen and (max-width:768px) {
+            width: 85%;
+            box-sizing: border-box;
+            padding-top: 3rem;
+
+          }
+
+          img {
+            box-shadow: 7px 7px $main-color;
+            height: auto;
+            max-width: 100%;
+          }
+        }
+      }
+
+      &_contents-bottom {
+        display: flex;
+        align-items: center;
+        column-gap: 8rem;
+
+        width: 100%;
+
+
+        @media screen and (max-width:768px) {
+          flex-direction: column-reverse;
+        }
+
+        &--text {
+          width: 53.7%;
+          flex-shrink: 1;
+
+          @media screen and (max-width:768px) {
+            width: 100%;
+          }
+
+          h3,
+          p {
+            color: white;
+            font-size: 1.6rem;
+          }
+
+          h3 {
+            letter-spacing: 0.2rem;
+            font-size: 3.2rem;
+            margin: 3rem 0 3rem 0;
+            line-height: 150%;
+
+            @media screen and (max-width:768px) {
+              margin: 5.3rem 0 2rem 0;
+              font-size: 2.4rem;
+              letter-spacing: 0.15rem;
+              line-height: 130%;
+            }
+          }
+
+          p {
+            line-height: 180%;
+            letter-spacing: 0.1rem;
+
+            @media screen and (max-width:768px) {
+              font-size: 1.5rem;
+            }
+          }
+        }
+
+        &--img {
+          transform: skew(6deg, 0deg);
+          flex-shrink: 1;
+
+          @media screen and (max-width:768px) {
+            box-sizing: border-box;
+            padding-top:3rem;
+            width: 85%;
+          }
+
+          img {
+            box-shadow: -7px 7px $main-color;
+            height: auto;
+            max-width: 100%;
+          }
+        }
+      }
+    }
+
+    .cta {
+      padding: 10.5rem 0 10rem 0;
+      text-align: center;
+
+      @media screen and (max-width:768px) {
+        padding-top: 7.68rem;
+        padding-bottom: 7rem;
+      }
+
+      &_contents {
+        p {
+          font-size: 6.4rem;
+          font-weight: bold;
+          color: white;
+          margin-bottom: 2.5rem;
+          letter-spacing: 0.3rem;
+
+          @media screen and (max-width:768px) {
+            font-size: 3.2rem;
+            letter-spacing: 0.16rem;
+            margin-bottom: 2rem;
+          }
+        }
+
+        a {
+          @media screen and (max-width:768px) {
+            padding: 2rem 4.15rem;
+            font-size: 1.6rem;
+          }
+        }
+
+      }
+    }
+
+    .trailer {
+      position: relative;
+      background-color: $main-color;
+      padding: 11rem 0;
+
+      @media screen and (max-width:768px) {
+        padding: 5rem 0;
+      }
+
+      &_bg-line-top-skyblue {
+        span {
+          &:nth-child(1) {
+            border-color: transparent $main-color transparent transparent;
+          }
+
+          &:nth-child(2) {
+            background-color: $main-color;
+          }
+
+        }
+      }
+
+      &_contents {
+        max-width: 114rem;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+
+        @media screen and (max-width:768px) {
+          padding: 0 2rem;
+        }
+
+        .section-title {
+          margin-bottom: 7rem;
+
+          @media screen and (max-width:768px) {
+            letter-spacing: 0.3rem;
+            padding-left: 0.3rem;
+            margin-bottom: 4.5rem;
+          }
+
+          &::after {
+            background-color: black;
+            bottom: -2rem;
+            left: 1.5rem;
+
+            @media screen and (max-width:768px) {
+              bottom: -1.5rem;
+              left: 0.4rem;
+            }
+          }
+        }
+      }
+
+      &_youtube {
+        aspect-ratio: 57 / 28;
+        width: 100%;
+
+        iframe {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+
+      &_bg-line-bottom-skyblue {
+        @extend .trailer_bg-line-top-skyblue;
+      }
+
+
+    }
+  }
+
+  .footer {
+    background-color: black;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 11rem;
+    align-items: center;
+    padding: 0 3rem;
+    @media screen and (max-width:768px){
+      box-sizing: border-box;
+      height:23.4rem;
+      padding:4rem 2rem;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    &_sns {
+      width: 34.9rem;
+      height: 3rem;
+      @media screen and (max-width:768px){
+        width:50%;
+        height: auto;
+      }
+      img{
+        height:auto
+      }
+    }
+
+    &_copy-right {
+      @media screen and (max-width:768px){
+        margin: 3rem 0 4.4rem 0;
+      }
+      p {
+        font-size: 1.4rem;
+        color: white;
+        font-weight: 300;
+        letter-spacing: 0.1rem;
+      }
+    }
+  }
+  .play-btn{
+    display: none;
+    width: 100%;
+    box-sizing: border-box;
+    padding:2rem 0;
+    background-color: black;
+    position: fixed;
+    bottom:0;
+    .btn{
+      display: block;
+      scroll-behavior: smooth;
+      font-size: 1.6rem;
+      padding:2rem 0;
+      width: 90%;
+      margin:0 auto;
+      text-align: center;
+  }
+  }
+}
