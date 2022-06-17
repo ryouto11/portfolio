@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>細谷涼斗のポートフォリオ</title>
+    <link rel="stylesheet" href="./mosya/reset.css" />
     <link rel="stylesheet" href="stylesheet.css" />
     <link rel="stylesheet" href="responsive.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,213 +14,397 @@
   </head>
 
   <body>
+    <!-- ローディング -->
+    <div class="loading">
+      <div class="flower-spinner">
+        <div class="dots-container">
+          <div class="bigger-dot">
+            <div class="smaller-dot"></div>
+          </div>
+        </div>
+      </div>
+      <p>Loading</p>
+    </div>
+    
     <!----- ヘッダー ----->
     <header>
-      <div class="container">
-        <div class="header-menu">
-          <div class="header-left">Ryoto Hosoya</div>
-          <div class="header-right">
-            <a href="https://twitter.com/ryo18429659"
-              ><i class="fab fa-twitter-square fa-2x"></i
-            ></a>
-          </div>
-        </div>
-        <div class="nav">
-          <ul>
-            <a href="#about">
-              <li>about</li>
-            </a>
-            <a href="#skills">
-              <li>skills</li>
-            </a>
-            <a href="#works">
-              <li>works</li>
-            </a>
-            <a href="#contact">
-              <li>contact</li>
-            </a>
-          </ul>
-        </div>
+      <div class="hamburger-wrap">
+        <a class="header-hamburger" id="header-hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </a>
+      </div>
 
-        <div class="table">
-          <table width="100%">
-            <tr>
-              <td><a href="#about">about</a></td>
-              <td><a href="#skills">skills</a></td>
-            </tr>
-            <tr>
-              <td><a href="#works">works</a></td>
-              <td><a href="#contact">contact</a></td>
-            </tr>
-          </table>
-        </div>
+      <div class="header-modal-bg" id="header-modal-bg"></div>
+      <div class="header-modal-content">
+        <ul class="header-modal-menu-list">
+          <li>
+            <a href="#about">about</a>
+          </li>
+          <li>
+            <a href="#skills">skills</a>
+          </li>
+          <li>
+            <a href="#works">works</a>
+          </li>
+          <li>
+            <a href="#contact">contact</a>
+          </li>
+        </ul>
+        <div class="header-modal-contact">
+          <a href="https://twitter.com/ryo18429659" target="_blank"
+            ><i class="fab fa-twitter-square fa-2x"></i
+          ></a>
+        <a class="btn">
+          <i class="fas fa-envelope fa-2x mail-btn"></i> 
+        </a>
+      </div>
       </div>
     </header>
-    <div class="top-wrapper">
-      <img class="main-img" src="images/top-photo.png" />
-    </div>
-
-    <div class="about-wrapper">
-      <div class="container">
-        <h1 class="main-logo" id="about">about</h1>
-        <div id="about-contents">
-          <img class="myphoto" src="images/about-img.png" alt="私の顔" />
-          <div class="about-text">
-            <div class="pro">
-              <p>
-                氏名：　細谷涼斗<br />
-                生年月日：　1999年11月10日 <br />
-                職業：　大学生
-              </p>
-            </div>
-            <div class="maintext">
-              <p class="main-text">
-                創価大学経営学部に入学し経営を中心に勉学に励んでいたが、大学3年次の夏より、Web上のモノづくりに憧れ、プログラミングの学習を始める。
-                プログラミングスクールへ通い、フロントエンドの知識と技術を学ぶ。
-                自分の知識や技術を用いて、多くの人に好まれるサービスを作りたい。
-              </p>
-            </div>
-          </div>
-        </div>
+    <div class="mainvisual">
+      <img src="images/computer-1846056.jpg" />
+      <div class="mainvisual-text">
+        <h1>Portfolio</h1>
+        <p>Welcome</p>
+      </div>
+      <div class="scroll-down">
+        <p>SCROLL</p>
+        <span></span>
       </div>
     </div>
-    <div class="skills-wrapper">
-      <div class="container">
-        <div class="content">
-          <h1 class="main-logo" id="skills">skills</h1>
-          <div class="about-skills">
-            <h1 class="sub-logo">コーディング</h1>
-            <div class="icon">
-              <i class="fas fa-laptop fa-3x"></i>
-            </div>
-            <div id="skills-text">
-              <p>
-                私はサイトの構成を設計し、HTMLで文書を記述、CSSでサイトのデザインを整えることができます。
-                レスポンシブデザインにより、様々な端末に対応するサイトを制作できます。
-                また、動きのあるサイトはJavaScriptで制作できます。
-                さらに、アニメーションを使って閲覧者が楽しめるようなサイトはjQueryで実現させることができます。
-              </p>
+    <main>
+      <div class="about-wrapper">
+        <div class="container">
+          <h2 class="section-title slide-in" id="about">about</h2>
+          <div id="about-contents">
+            <img
+              class="myphoto slide-in"
+              src="images/about-img.png"
+              alt="私の顔"
+            />
+            <div class="about-text slide-in">
+              <div class="pro">
+                <p>
+                  氏名：　細谷涼斗<br />
+                  生年月日：　1999年11月10日 <br />
+                  職業：　大学生
+                </p>
+              </div>
+              <div class="maintext">
+                <p class="main-text">
+                  創価大学経営学部に入学し経営を中心に勉学に励んでいたが、大学3年次の夏より、Web上のモノづくりに憧れ、プログラミングの学習を始める。
+                  プログラミングスクールへ通い、フロントエンドの知識と技術を学ぶ。
+                  自分の知識や技術を用いて、多くの人に好まれるサービスを作りたい。
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="works-wrapper">
-      <div class="container">
-        <h1 class="main-logo" id="works">works</h1>
-        <div id="work-contents">
-          <div class="works">
-            <a href="mosya/mosya6/index.html"
-              ><img src="images/mosya6.png" alt="模写コーディング"
-            /></a>
-            <p class="use-lang">HTML/CSS/JavaScript(jQuery)</p>
-            <p>
-              今回デザインカンプはFigmaを使用しました。本サイトはパララックスの実装/ローディングの実装/videoタグによる背景動画の設置/動画の粗さを抑えて見せるbackground-imageの使用/audioタグによる音声ファイルの再生または停止/スクロールダウン表示の実装/transform:skewで画像を傾ける/画像の下に地を引く/YouTube動画の埋め込み/スムーススクロール/といった技術を織り込んだサイトになっています。また今回はGoogle
-              Chromeの拡張機能である、『Perfect
-              Pixel』を使用し、デザインカンプとの誤差をできるだけ減らしました。
-            </p>
-          </div>
-
-          <div class="works">
-            <a href="mosya/mosya5/index.html"
-              ><img src="images/mosya5.png" alt="模写コーディング"
-            /></a>
-            <p class="use-lang">HTML/CSS/JavaScript(jQuery)</p>
-            <p>
-              本サイトはスクロールにあわせて動きをつけた躍動感のあるギャラリーサイトである。メインビジュアルはPC表示の場合、下にスクロールすると画像を拡大させ、スマホ表示の場合は画像を縮小させる。サイドボタンはGALLERYタイトルが画面下にきたタイミングで、画面右から現れる仕様になっている。
-            </p>
-          </div>
-          <div class="works">
-            <a href="mosya/mosya4/index.html"
-              ><img src="images/mosya4.png" alt="模写コーディング"
-            /></a>
-            <p class="use-lang">HTML/CSS/JavaScript(jQuery)</p>
-            <p>
-              本サイトは、jQueryを使用したWebサイトの模写コーディングである。グリッドレイアウト、動画の埋め込み（video）、ハンバーガ―メニュー（css、jquery）、カルーセルスライダー（jquery）、スムーススクロール（jquery）、スクロール時の画像フェード表示（jquery）など基本的な要素を多く含んでいる。カルーセルスライダーはプラグインである『slick』を使用している。
-            </p>
-          </div>
-          <div class="works">
-            <a href="cook-camp/cookcamp.html"
-              ><img src="images/cook-camp.png" alt="クックキャンプの模写サイト"
-            /></a>
-            <p class="use-lang">HTML/CSS/</p>
-            <p>
-              プログラミングスクールの課題ではあるが１から全て自分でコーディングをしている。本サイトの特徴として3カラムレイアウトで構成されている点と特定の文の先頭にアイコンを配置している点が挙げられる。
-              また、アイコンを文の先頭につける箇所では、繰り返し使うアイコンの場合、CSSで文の背景にアイコンを表示させることで複数回の記述を避けている。
-            </p>
-          </div>
-          <div class="works">
-            <a href="mosya/mosya3/mosya3.html"
-              ><img src="images/mosya3.png" alt="模写サイトの写真"
-            /></a>
-            <p class="use-lang">HTML/CSS</p>
-            <p>
-              本サイトは2カラムのレイアウトで構成されている。articleタグ、asideタグ、Flexboxを使用した横並びの配置、スマホ時のグローバルナビ横スクロール、Google
-              Fontsを使ったフォントの変更、Twitterの埋め込みなどを実装している。またホバー時、READ
-              MOREという文字に動きが付く仕様にしてある。
-            </p>
-          </div>
-          <div class="works">
-            <a href="mosya/mosya2/mosya2.html"
-              ><img src="images/mosya2.png" alt="模写サイトの写真"
-            /></a>
-            <p class="use-lang">HTML/CSS</p>
-            <p>
-              本サイトは1カラムレイアウトで構成されており、header、footer、main、navタグを使ったシンプルなレイアウトとなっている。PCとスマホでの画像切り替え、dl、dt、ddといったリストタグやコンタクトフォーム（form、input、textarea）の実装など基本的な要素を詰め込んだサイトとなっている。
-            </p>
-          </div>
-          <div class="works">
-            <a href="#"
-              ><img src="images/portforio-photo.png" alt="ポートフォリオの写真"
-            /></a>
-            <p class="use-lang">HTML/CSS</p>
-            <p>
-              本サイトは白と黒を基調としたシンプルでわかりやすいポートフォリオサイトになっている。サイトのタイトルや見出しは文字の間隔を空け、お洒落なイメージにしている。worksでは作品を3つ目で折り返しさせ、折り返し後も左端に配置させるためflex-wrapを用い、均等な幅と均等な余白を持たせるために、gapとcalc関数を使っている。
-            </p>
-          </div>
-          <div class="works">
-            <a href="mosya/mosya1/mosya1.html"
-              ><img src="images/mosya1.png" alt="模写サイトの写真"
-            /></a>
-            <p class="use-lang">HTML/CSS</p>
-            <p>
-              本サイトは簡単な自己紹介サイトの模写コーディングである。HTML・CSSの基礎的なタグを使用している。プロフィール写真はCSSで画像を丸く表示させている。
-            </p>
+      <div class="skills-wrapper">
+        <div class="container">
+          <div class="content">
+            <h2 class="section-title slide-in" id="skills">skills</h2>
+            <div class="about-skills slide-in">
+              <h1 class="sub-logo">コーディング</h1>
+              <div class="icon">
+                <i class="fas fa-laptop fa-3x"></i>
+              </div>
+              <div id="skills-text">
+                <p>
+                  私はサイトの構成を設計し、<span>HTML</span>で文書を記述、<span>CSS</span>でサイトのデザインを整えることができます。
+                  <span>レスポンシブデザイン</span
+                  >により、様々な端末に対応するサイトを制作できます。
+                  さらに、アニメーションを使うようなサイトは<span>jQuery</span>で実現させることができます。
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="contact-wrapper">
-      <div class="container">
-        <h1 class="main-logo" id="contact">contact</h1>
-        <div class="icon">
-          <a href="https://twitter.com/ryo18429659"
-            ><i class="fab fa-twitter-square fa-4x"></i
-          ></a>
+      <div class="works-wrapper">
+        <div class="container">
+          <h2 class="section-title" id="works">works</h2>
+          <div id="work-contents">
+            <div class="works">
+              <a class="7">
+                <img
+                  class="slide-in"
+                  src="images/mosya6.png"
+                  alt="模写コーディング"/>
+                </a>
+            </div>
+
+            <div class="works">
+              <a class="6">
+                <img
+                  class="slide-in"
+                  src="images/mosya5.png"
+                  alt="模写コーディング"
+              /></a>
+            </div>
+            <div class="works">
+              <a class="5"
+                ><img
+                  class="slide-in"
+                  src="images/cook-camp.png"
+                  alt="クックキャンプの模写サイト"
+              /></a>
+            </div>
+            <div class="works">
+              <a class="4"
+                ><img
+                  class="slide-in"
+                  src="images/mosya3.png"
+                  alt="模写サイトの写真"
+              /></a>
+            </div>
+            <div class="works">
+              <a class="3"
+                ><img
+                  class="slide-in"
+                  src="images/mosya2.png"
+                  alt="模写サイトの写真"
+              /></a>
+            </div>
+            <div class="works">
+              <a class="2"
+                ><img
+                  class="slide-in"
+                  src="images/portfolio.png"
+                  alt="ポートフォリオの写真"
+              /></a>
+            </div>
+            <div class="works">
+              <a class="1"
+                ><img
+                  class="slide-in"
+                  src="images/mosya1.png"
+                  alt="模写サイトの写真"
+              /></a>
+            </div>
+          </div>
+
+          <div class="popup">
+            <div class="popup-modal-bg"></div>
+
+            <div class="popup-contents works7">
+              <div class="cross-icon">
+                <span></span>
+                <span></span>
+              </div>
+              <div class="left-contents">
+                <div class="work-title popup-title">
+                  <h3>模写コーディングサイト</h3>
+                </div>
+                <p>
+                  今回デザインカンプはFigmaを使用した。本サイトはパララックスの実装/ローディングの実装/videoタグによる背景動画の設置/動画の粗さを抑えて見せるbackground-imageの使用/audioタグによる音声ファイルの再生または停止/スクロールダウン表示の実装/transform:skewで画像を傾ける/画像の下に地を引く/YouTube動画の埋め込み/スムーススクロール/といった技術を織り込んだサイトになっている。また今回はGoogleChromeの拡張機能である『PerfectPixel』を使用し、デザインカンプとの誤差をできるだけ減らした。
+                </p>
+                <div class="use-lang">
+                  <div class="popup-title">
+                    <h4>使用言語など</h4>
+                  </div>
+                  <p>HTML/CSS/JavaScript(jQuery)<br />Perfect Pixel、Figma</p>
+                </div>
+              </div>
+              <div class="right-contents">
+                <a href="mosya/mosya6/index.html">
+                  <img src="images/mosya6.png" alt="模写コーディング" />
+                </a>
+              </div>
+            </div>
+
+            <div class="popup-contents works6">
+              <div class="cross-icon">
+                <span></span>
+                <span></span>
+              </div>
+              <div class="left-contents">
+                <div class="work-title popup-title">
+                  <h3>模写コーディングサイト</h3>
+                </div>
+                <p>
+                  本サイトはスクロールにあわせて動きをつけた躍動感のあるギャラリーサイトである。メインビジュアルはPC表示の場合、下にスクロールすると画像を拡大させ、スマホ表示の場合は画像を縮小させる。サイドボタンはGALLERYタイトルが画面下にきたタイミングで、画面右から現れる仕様になっている。
+                </p>
+                <div class="use-lang">
+                  <div class="popup-title">
+                    <h4>使用言語など</h4>
+                  </div>
+                  <p>HTML/CSS/JavaScript(jQuery)<br />adobeXD</p>
+                </div>
+              </div>
+              <div class="right-contents">
+                <a href="mosya/mosya5/index.html">
+                  <img src="images/mosya5.png" alt="模写コーディング" />
+                </a>
+              </div>
+            </div>
+
+            <div class="popup-contents works5">
+              <div class="cross-icon">
+                <span></span>
+                <span></span>
+              </div>
+              <div class="left-contents">
+                <div class="work-title popup-title">
+                  <h3>模写コーディングサイト</h3>
+                </div>
+                <p>
+                  プログラミングスクールの課題ではあるが１から全て自分でコーディングをしている。本サイトの特徴として3カラムレイアウトで構成されている点と特定の文の先頭にアイコンを配置している点が挙げられる。
+                  また、アイコンを文の先頭につける箇所では、繰り返し使うアイコンの場合、CSSで文の背景にアイコンを表示させることで複数回の記述を避けている。
+                </p>
+                <div class="use-lang">
+                  <div class="popup-title">
+                    <h4>使用言語など</h4>
+                  </div>
+                  <p>HTML/CSS</p>
+                </div>
+              </div>
+              <div class="right-contents">
+                <a href="cook-camp/cookcamp.html">
+                  <img src="images/cook-camp.png" alt="模写コーディング" />
+                </a>
+              </div>
+            </div>
+
+            <div class="popup-contents works4">
+              <div class="cross-icon">
+                <span></span>
+                <span></span>
+              </div>
+              <div class="left-contents">
+                <div class="work-title popup-title">
+                  <h3>模写コーディングサイト</h3>
+                </div>
+                <p>
+                  本サイトは2カラムのレイアウトで構成されている。articleタグ、asideタグ、Flexboxを使用した横並びの配置、スマホ時のグローバルナビ横スクロール、Google
+                  Fontsを使ったフォントの変更、Twitterの埋め込みなどを実装している。またホバー時、READ
+                  MOREという文字に動きが付く仕様にしてある。
+                </p>
+                <div class="use-lang">
+                  <div class="popup-title">
+                    <h4>使用言語など</h4>
+                  </div>
+                  <p>HTML/CSS<br />adobeXD</p>
+                </div>
+              </div>
+              <div class="right-contents">
+                <a href="mosya/mosya3/mosya3.html">
+                  <img src="images/mosya3.png" alt="模写コーディング" />
+                </a>
+              </div>
+            </div>
+
+            <div class="popup-contents works3">
+              <div class="cross-icon">
+                <span></span>
+                <span></span>
+              </div>
+              <div class="left-contents">
+                <div class="work-title popup-title">
+                  <h3>模写コーディングサイト</h3>
+                </div>
+                <p>
+                  本サイトは1カラムレイアウトで構成されており、header、footer、main、navタグを使ったシンプルなレイアウトとなっている。PCとスマホでの画像切り替え、dl、dt、ddといったリストタグやコンタクトフォーム（form、input、textarea）の実装など基本的な要素を詰め込んだサイトとなっている。
+                </p>
+                <div class="use-lang">
+                  <div class="popup-title">
+                    <h4>使用言語など</h4>
+                  </div>
+                  <p>HTML/CSS<br />adobeXD</p>
+                </div>
+              </div>
+              <div class="right-contents">
+                <a href="mosya/mosya2/mosya2.html">
+                  <img src="images/mosya2.png" alt="模写コーディング" />
+                </a>
+              </div>
+            </div>
+
+            
+            <div class="popup-contents works2">
+              <div class="cross-icon">
+                <span></span>
+                <span></span>
+              </div>
+              <div class="left-contents">
+                <div class="work-title popup-title">
+                  <h3>模写コーディングサイト</h3>
+                </div>
+                <p>
+                  本サイトは白と黒を基調としたシンプルでわかりやすいポートフォリオサイトになっている。サイトのタイトルや見出しは文字の間隔を空け、お洒落なイメージにしている。worksでは作品を3つ目で折り返しさせ、折り返し後も左端に配置させるためflex-wrapを用い、均等な幅と均等な余白を持たせるために、gapとcalc関数を使っている。
+                </p>
+                <div class="use-lang">
+                  <div class="popup-title">
+                    <h4>使用言語など</h4>
+                  </div>
+                  <p>HTML/CSS<br />adobeXD</p>
+                </div>
+              </div>
+              <div class="right-contents">
+                <a href="#">
+                  <img src="images/portfolio.png" alt="模写コーディング" />
+                </a>
+              </div>
+            </div>
+
+            <div class="popup-contents works1">
+              <div class="cross-icon">
+                <span></span>
+                <span></span>
+              </div>
+              <div class="left-contents">
+                <div class="work-title popup-title">
+                  <h3>模写コーディングサイト</h3>
+                </div>
+                <p>
+                  本サイトは簡単な自己紹介サイトの模写コーディングである。HTML・CSSの基礎的なタグを使用している。プロフィール写真はCSSで画像を丸く表示させている。
+                </p>
+                <div class="use-lang">
+                  <div class="popup-title">
+                    <h4>使用言語など</h4>
+                  </div>
+                  <p>HTML/CSS<br />adobeXD</p>
+                </div>
+              </div>
+              <div class="right-contents">
+                <a href="mosya/mosya1/mosya1.html">
+                  <img src="images/mosya1.png" alt="模写コーディング" />
+                </a>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
+
+      
+      <div class="contact-wrapper">
+        <div class="container">
+          <h2 class="section-title" id="contact">contact</h2>
+          <div class="contact-contents">
+              <a href="https://twitter.com/ryo18429659" target="_blank"
+                ><i class="fab fa-twitter-square fa-6x"></i
+              ></a>
+            <i class="fas fa-envelope fa-7x btn mail-btn"></i>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="closing">
+      <p>Thank you for coming!</p>
     </div>
     <!----- フッター ----->
     <footer>
-      <div class="nav">
-        <ul>
-          <a href="#about">
-            <li>about</li>
-          </a>
-          <a href="#skills">
-            <li>skills</li>
-          </a>
-          <a href="#works">
-            <li>works</li>
-          </a>
-          <a href="#contact">
-            <li>contact</li>
-          </a>
-        </ul>
-      </div>
+      <p class="copy-right">© 2022 Hosoya Ryoto</p>
+      <a href="#" class="scroll-top-btn">
+        <span class="arrow-up"></span>
+      </a>
     </footer>
     <!----- フッター END ----->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>

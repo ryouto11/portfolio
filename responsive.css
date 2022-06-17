@@ -1,12 +1,5 @@
 @media (max-width: 767px) {
 
-.container {
-    width: 90%;
-}
-
-header {
-    margin-top: 40px;
-}
 .header-left {
     font-size: 20px;
     letter-spacing: 5px;
@@ -14,33 +7,17 @@ header {
 .nav {
     display: none;
 }
-
-.table td {
-    width: 50%;
-    height: 2em;
-    border: solid 1px #d9d9d9;
-    text-align: center;
-    vertical-align: middle;
-    padding: 10px;
+.mainvisual .mainvisual-text h1{
+    font-size: 5rem;
+    letter-spacing: 1rem;
 }
-
-.table a {
-    letter-spacing: 2px;
-    display: block;
-}
-
-.table {
-    display: block;
-    padding-top: 10px;
-}
-
 .contents {
     display: block;
     text-align: center;
 }
 
 .myphoto  {
-   display: none;
+    display: none;
 }
 #about-contents{
     flex-direction: column;
@@ -66,6 +43,26 @@ header {
 }
 #work-contents .works{
     width:100%;
+}
+.popup .popup-contents{
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2rem 1.5rem;
+}
+.popup .popup-contents::-webkit-scrollbar{
+    display: none;
+}
+.popup .left-contents,.popup .right-contents {
+    width: 100%;
+}
+.popup .left-contents{
+    margin-bottom: 3rem;
+}
+.popup .cross-icon{
+    z-index: 1;
+}
+.closing p{
+    font-size: 4rem;
 }
 footer .nav{
     display: flex;
