@@ -64,7 +64,7 @@ $(".works a").click(function(){
   $('.' + "works" + num).css("display","flex");
   $("body").css("overflow-y","hidden")
 });
-$(".cross-icon,.popup-modal-bg").click(function(){
+$(".cross-icon,.popup-modal-bg,.works2 a").click(function(){
   $(".popup").fadeOut();
   $(".popup-contents").fadeOut();
   $(".hamburger-wrap").fadeIn();
