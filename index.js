@@ -1,5 +1,9 @@
 $(window).on('load', function(){
+  $("body").css("overflow-y","hidden")
   $('.loading').delay(1200).fadeOut(800);
+  setTimeout(function(){
+    $("body").css("overflow-y","auto");
+        },1900);
   console.log("ローディング完了");
   });
   $(function(){
