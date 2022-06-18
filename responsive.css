@@ -48,6 +48,8 @@
     flex-direction: column;
     justify-content: flex-start;
     padding: 2rem 1.5rem;
+    height: auto;
+    max-height: calc(100vh - 5%);
 }
 .popup .popup-contents::-webkit-scrollbar{
     display: none;

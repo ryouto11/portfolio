@@ -540,7 +540,6 @@ main {
     display: none;
     overflow: scroll;
     justify-content: space-evenly;
-    align-items: center;
 }
 
 .popup .cross-icon {
@@ -582,6 +581,7 @@ main {
 
 .popup .left-contents {
     width: 35%;
+    margin: auto 0;
 }
 
 .popup .left-contents .work-title {
@@ -661,6 +661,9 @@ main {
 .popup-contents img {
     border: 1rem solid rgb(74, 72, 72);
     vertical-align: bottom;
+}
+.popup-contents img:hover{
+    opacity: 0.7;
 }
 
 .popup-contents a {
