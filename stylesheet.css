@@ -3,20 +3,19 @@ html {
     font-size: 10px;
 }
 
-/* @keyframes disableScroll {
+body {
+    color: #333;
+    font-size: 10px;
+    background-color: #fff;
+    animation: disableScroll .1s linear 1.9s backwards;
+}
+@keyframes disableScroll {
 0%{
 overflow-y: hidden;
 }
 100%{
 overflow-y: auto;
 }
-} */
-body {
-    color: #333;
-    font-size: 10px;
-    background-color: #fff;
-    overflow-y: hidden;
-    /* animation: disableScroll .1s linear 1.9s backwards; */
 }
 
 img {
@@ -541,6 +540,7 @@ main {
     display: none;
     overflow: scroll;
     justify-content: space-evenly;
+    padding: 1rem 0;
 }
 
 .popup .cross-icon {
