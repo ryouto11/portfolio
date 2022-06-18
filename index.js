@@ -1,9 +1,10 @@
+// ローディング
 $(window).on('load', function(){
-  $("body").css("overflow-y","hidden")
+  // $("body").css("overflow-y","hidden")
   $('.loading').delay(1200).fadeOut(800);
-  setTimeout(function(){
-    $("body").css("overflow-y","auto");
-        },1900);
+  // setTimeout(function(){
+  //   $("body").css("overflow-y","auto");
+  //       },1900);
   console.log("ローディング完了");
   });
   $(function(){
@@ -13,8 +14,6 @@ $(window).on('load', function(){
   $('.loading').delay(900).fadeOut(800);
   console.log("10秒経過");
   }
-  
-  
   // ローディング中のスクロール禁止
 
 // ハンバーガーメニュー
