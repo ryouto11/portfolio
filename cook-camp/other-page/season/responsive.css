@@ -1,0 +1,18 @@
+@media (max-width: 767px) {
+  .popup .popup-contents{
+    width:80%;
+  }
+  .popup .top-contents{
+    flex-direction: column-reverse;
+    align-items: center
+  }
+  .popup .left-contents{
+    width:100%;
+  }
+  .popup .right-contents{
+    width:100%;
+  }
+  .popup .right-contents img{
+    height: 18rem;
+  }
+}
