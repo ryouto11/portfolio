@@ -9,6 +9,9 @@ body{
 img{
     max-width: 100%;
 }
+a:hover{
+    font-weight: bold;
+}
 .wrapper{
     max-width: 960px;
     margin: 0px auto;
