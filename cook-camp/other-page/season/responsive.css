@@ -2,17 +2,27 @@
   .popup .popup-contents{
     width:80%;
   }
+  .popup .vegetable-title{
+    margin-top: 0;
+  }
   .popup .top-contents{
     flex-direction: column-reverse;
-    align-items: center
+    align-items: center;
+    margin-bottom:1rem;
   }
   .popup .left-contents{
     width:100%;
   }
   .popup .right-contents{
-    width:100%;
+    width:90%;
+    height:auto;
+    margin-bottom: 1rem;
   }
-  .popup .right-contents img{
-    height: 18rem;
+  .popup .right-contents a{
+    height:auto;
+    aspect-ratio: 5 / 3;
+  }
+  .energy, .choice {
+    margin-bottom: 1rem;
   }
 }

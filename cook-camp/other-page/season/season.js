@@ -14,4 +14,3 @@ $(".cross-icon,.popup-modal-bg").click(function(){
   $("body").css("overflow-y","auto")
 });
 // クラスで特定、表示
-$("")
