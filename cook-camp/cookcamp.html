@@ -7,8 +7,12 @@
       content="width=device-width, initial-scale=1, minimum-scale=1"
     />
     <title>料理レシピ掲載サイト</title>
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="cookcamp.css" />
+    <link rel="stylesheet" href="./other-page/season/reset.css" />
+    <link rel="stylesheet" href="./header.css" />
+    <link rel="stylesheet" href="./css/cookcamp.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/slick-theme.css">
     <link rel="shortcut icon" href="images/icon/favicon.ico" />
   </head>
   <body>
@@ -31,25 +35,74 @@
         <p id="title">誰でも作れる簡単料理レシピ掲載サイト</p>
         <nav>
           <ul>
-            <li><a href="#">新着レシピ</a></li>
-            <li><a href="#">料理から検索</a></li>
-            <li><a href="#">食材から検索</a></li>
-            <li><a href="#">旬の料理特集</a></li>
-            <li><a href="#">ランキング</a></li>
+            <li>トップ</li>
+            <li>
+              <a href="#">新着レシピ</a>
+            </li>
+            <li>
+              <a href="#">定番レシピ</a>
+            </li>
+            <li>
+              <a href="./other-page/season/season.html">旬の野菜</a>
+            </li>
+            <li>
+              <a href="#">旬の料理特集</a>
+            </li>
           </ul>
         </nav>
+      </div>
+      <!-- ハンバーガーメニュー -->
+      <div class="hamburger-wrap">
+        <a class="header-hamburger" id="header-hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </a>
+      </div>
+
+      <div class="header-modal-bg" id="header-modal-bg"></div>
+      <div class="header-modal-content">
+        <ul class="header-modal-menu-list">
+          <li>
+            <a href="#about">トップ</a>
+          </li>
+          <li>
+            <a href="#works">新着レシピ</a>
+          </li>
+          <li>
+            <a href="#works">定番レシピ</a>
+          </li>
+          <li>
+            <a href="./other-page/season/season.html">旬の野菜</a>
+          </li>
+          <li>
+            <a href="#contact">旬の料理特集</a>
+          </li>
+        </ul>
       </div>
     </header>
     <main>
       <div id="main-visual" class="wrapper">
         <img src="images/contents/mainView.jpg" alt="メインビジュアル" />
       </div>
+      <form class="res-search">
+        <input
+          id="sbox"
+          name="s"
+          type="search"
+          placeholder="料理名・食材名で検索"
+        />
+        <input id="sbtn" type="submit" value="レシピ検索" />
+      </form>
       <div id="three-contents" class="wrapper">
         <div id="side-left">
           <aside>
             <div class="sub-title">
               <img src="images/icon/dish.png" alt="フォークのマーク" />
-              <h2>料理別レシピ</h2>
+              <div class="sub-title-text">
+                <h2>料理別</h2>
+                <h2>レシピ</h2>
+              </div>
             </div>
             <ul>
               <li><a href="#">和食</a></li>
@@ -65,7 +118,10 @@
           <aside>
             <div class="sub-title">
               <img src="images/icon/dish.png" alt="フォークのマーク" />
-              <h2>目的別レシピ</h2>
+              <div class="sub-title-text">
+                <h2>目的別</h2>
+                <h2>レシピ</h2>
+              </div>
             </div>
             <ul>
               <li><a href="#">お弁当</a></li>
@@ -84,25 +140,27 @@
               <img src="images/icon/dish.png" alt="フォークのマーク" />
               新着レシピ
             </h2>
-            <ul>
+            <ul class="slick-area">
               <li>
-                <img src="images/contents/newRecipes1.jpg" alt="料理の写真" />
+                <a href="#"><img src="images/contents/newRecipes1.jpg" alt="料理の写真" /></a>
                 <p>季節菜の彩り前菜</p>
               </li>
               <li>
-                <img src="images/contents/newRecipes2.jpg" alt="料理の写真" />
+                <a href="#"><img src="images/contents/newRecipes2.jpg" alt="料理の写真" /></a>
                 <p>簡単かぼちゃスープ</p>
               </li>
               <li>
-                <img src="images/contents/newRecipes3.jpg" alt="料理の写真" />
+                <a href="#"><img src="images/contents/newRecipes3.jpg" alt="料理の写真" /></a>
                 <p>ヘルシー米粉パン</p>
               </li>
               <li>
-                <img src="images/contents/newRecipes4.jpg" alt="料理の写真" />
+                <a href="#"><img src="images/contents/newRecipes4.jpg" alt="料理の写真" /></a>
                 <p>ぷりぷり海老料理</p>
               </li>
               <li>
-                <img src="images/contents/newRecipes5.jpg" alt="料理の写真" />
+                <a href="#">
+                  <img src="images/contents/newRecipes5.jpg" alt="料理の写真" />
+                </a>
                 <p>かんたん鴨南蛮</p>
               </li>
             </ul>
@@ -110,7 +168,7 @@
           <article id="japanese-food">
             <h2 class="sub-title">
               <img src="images/icon/dish.png" alt="フォークのマーク" />
-              今だからこそ見直したい「和食
+              今だからこそ見直したい「和食」
             </h2>
             <div id="japanese-food-contents">
               <div id="japanese-food-img">
@@ -118,16 +176,18 @@
               </div>
               <div id="japanese-food-text">
                 <p>
-                  　普段、私たちが何気なく口にしている和食ですが、そん基本は一汁三菜。ご飯、味噌汁、お漬物の他、主菜（魚またはお肉）、副菜として季節毎の野菜と豆類で構成されます。
+                  　普段、私たちが何気なく口にしている和食ですが、その基本は一汁三菜。ご飯、味噌汁、お漬物の他、主菜（魚またはお肉）、副菜として季節毎の野菜と豆類で構成されます。
                 </p>
                 <p>
                   昔から「旬の野菜を食べましょう」と言いますが、それは素材がじっくりと時間をかけて蓄積してきた旨味や栄養価が最高になったところでいただいて、効率よく栄養を取り風邪などの予防をしましょうね、ということです。
                 </p>
                 <p>それでは各季節毎の旬の野菜について調べてみましょう。</p>
-                <div class="read-more">
-                  <p><a href="./other-page/season/season.html">続きを読む</a></p>
-                </div>
               </div>
+            </div>
+            <div class="read-more">
+              <p>
+                <a href="./other-page/season/season.html">続きを読む</a>
+              </p>
             </div>
           </article>
           <article id="easy-recipes">
@@ -146,7 +206,7 @@
               </div>
             </div>
             <div class="read-more">
-              <p><a href="#">続きを読む</a></p>
+              <a href="#">続きを読む</a>
             </div>
             <div class="easy-recipes-contents">
               <img src="images/contents/pushRecipes2.jpg" alt="料理の写真" />
@@ -159,7 +219,7 @@
               </div>
             </div>
             <div class="read-more">
-              <p><a href="#">続きを読む</a></p>
+              <a href="#">続きを読む</a>
             </div>
           </article>
         </div>
@@ -184,5 +244,9 @@
       </nav>
       <p id="copyright">Copyright © Codecamp All Right Reserved.</p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="./header.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>

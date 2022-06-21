@@ -1,29 +1,16 @@
-html{
-  font-size: 10px;
-}
-header{
-  height:5rem;
-}
-header a{
-  line-height: 5rem;
-  padding-left: 5rem;
-  font-size: 1.3rem;
-  color: rgb(94, 215, 94);
-  font-weight: bold;
-}
-header a:hover{
-  opacity: 0.7;
+@charset "UTF-8";
+body{
+  background-color: #F5F5DC;
 }
 section{
-  padding-bottom: 10rem;
+  margin-bottom: 4rem;
 }
 .last-section{
-  padding-bottom: 0;
+  margin-bottom: 0;
 }
 .container{
   max-width: 100rem;
   margin: 0 auto;
-  padding: 0 3rem 5rem 3rem;
 }
 
 section:last-child{
@@ -34,11 +21,14 @@ section .section-title{
   position: relative;
   margin-bottom: 4rem;
 }
+section .spring{
+  margin:4rem 0;
+}
 section .section-title h2{
   display: inline-block;
   font-size: 3rem;
   text-align: center;
-  background-color: white;
+  background-color: #F5F5DC;
   position: relative;
   padding:0 2rem;
   z-index: 1;
@@ -82,6 +72,8 @@ section h2::first-letter{
   display:grid;
 grid-template-columns: repeat(auto-fit, minmax(22.75rem, 1fr));
 gap:3rem;
+background-color: white;
+padding: 3rem;
 }
 .vegetables p{
   padding:1rem 0;
@@ -96,7 +88,7 @@ gap:3rem;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1;
+  z-index: 3;
 }
 
 .popup .popup-modal-bg {

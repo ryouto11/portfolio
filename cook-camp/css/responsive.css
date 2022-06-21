@@ -1,0 +1,72 @@
+@charset "UTF-8";
+@media (max-width: 767px) {
+  html{
+    font-size: 10px;
+  }
+  .res-search{
+    display: block;
+    width: 100%;
+  }
+  #three-contents {
+    flex-direction: column;
+  }
+  #side-left{
+    width: 100%;
+    order: 2;
+  }
+  #main-contents{
+    width: 100%;
+    order: 1;
+  }
+  #main-contents #japanese-food-contents{
+    flex-direction: column;
+    align-items: center;
+  }
+  #main-contents #japanese-food-img {
+    width: 70%;
+    margin-bottom: 2rem;
+}
+#main-contents #japanese-food-text {
+  width: 100%;
+}
+.easy-recipes-contents{
+  flex-direction: column;
+  align-items: center;
+}
+#main-contents #easy-recipes .easy-recipes-contents img{
+  width: 70%;
+  margin-bottom:2rem ;
+}
+#main-contents #easy-recipes .easy-recipes-contents .easy-recipes-text{
+  width: 100%;
+}
+#main-contents #easy-recipes .read-more{
+  padding:1rem 0;
+}
+.easy-recipes-contents:nth-of-type(3){
+  margin-top: 2rem;
+}
+#side-right{
+  width: 100%;
+  order: 3;
+  display: flex;
+  justify-content: space-between;
+}
+#side-right aside{
+  width:49%;
+}
+#footer{
+  height:4rem;
+  padding: 0;
+  box-sizing: content-box;
+}
+#footer nav{
+  display: none;
+}
+#footer p{
+  line-height: 4rem;
+}
+#footer #copyright{
+  margin:0;
+}
+}

@@ -1,0 +1,251 @@
+@charset "UTF-8";
+html{
+  font-size: 10px;
+}
+#header{
+  width:100%;
+  background-color: white;
+  border-bottom: 2px solid #DDDDDD;
+  padding:1rem;
+  height:10rem;
+}
+#header #header-contents{
+  max-width: 960px;
+  margin: 0px auto;
+  font-size: 0.9rem;
+}
+#header #header-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header #header-top form{
+  height: 25px;
+  font-size: 0.7rem;
+}
+#header #header-top #sbox{
+  border: 1px solid rgb(200,200,200);
+  padding:4px;
+  width:190px;
+  height: 25px;
+  font-size: 0.7rem;
+}
+#header #header-top #sbtn{
+  border: 1px solid rgb(200,200,200);
+  padding:5px;
+  background-color: rgb(247,247,247);
+  height: 25px;
+}
+#header nav{
+  margin-top: 10px;
+}
+#header nav ul{
+  display: flex;
+}
+#header nav ul li{
+  width:20%;
+  text-align: center;
+  font-size: 1.44rem;
+  font-weight: bold;
+}
+header a,header p{
+  font-size: 1.44rem;
+}
+#header nav ul li:not(:last-child){
+  border-right: 1px solid #DDDDDD;
+}
+#title{
+  color:#663300;
+}
+#header nav ul li a{
+  color:#663300;
+}
+#header a:hover{
+  font-size:1.55rem ;
+}
+#header #header-top #sbox {
+  font-size: 1.1rem;
+}
+#header #header-top #sbtn {
+  width:6.8rem;
+  height: 2.5rem;
+  padding:0;
+  line-height: 2.5rem;
+  font-size: 1.1rem;
+}
+#header #header-top #sbtn:hover{
+  background-color: #DDDDDD;
+}
+.hamburger-wrap{
+  display: none;
+}
+.header-modal-content {
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+
+
+
+
+
+
+@media (max-width: 767px) {
+  body{
+    padding-top:7.5rem;
+  }
+  #header{
+    position: fixed;
+    width: 100%;
+    top:0;
+    left:0;
+    height: 7.5rem;
+    z-index: 2;
+  }
+  #header-contents form,#header-contents nav{
+    display: none;
+  }
+  .hamburger-wrap {
+    display: block;
+    width: 6rem;
+    height: 6rem;
+    position: absolute;
+    top: 50%;
+    right: 3%;
+    transform: translateY(-50%);
+    z-index: 9999;
+    background-color: #9ACD32;
+    border-radius: 10px;
+}
+
+.hamburger-wrap.active {
+    background-color: transparent;
+}
+
+.header-hamburger {
+    display: block;
+    width: 3rem;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header-hamburger div {
+    display: block;
+    width: 100%;
+    height: 0.2rem;
+    background: #ffffff;
+    position: absolute;
+    transition: all 0.4s;
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.header-hamburger div:nth-child(1) {
+    transform: translate(-50%, -1rem);
+    /* // top50%により真ん中の線より半身下に飛び出している。線の高さが0.2rem、半身飛び出している部分が0.1rem、つまり、0.8remの間隔を空けたいならば0.8+0.2（線の太さ）+0.1（飛び出してる部分）＝1.1 */
+}
+
+.header-hamburger div:nth-child(3) {
+    transform: translate(-50%, 0.9rem);
+    /* // 半身１つ目より下にいるため、一つ目より半身分移動距離を減らす */
+}
+
+.header-hamburger .active {
+    z-index: 9999;
+}
+
+.header-hamburger.active div:nth-of-type(1) {
+    transform: translate(-50%, 0rem) rotate(-45deg);
+    background-color: white;
+}
+
+.header-hamburger.active div:nth-of-type(2) {
+    opacity: 0;
+    /*真ん中の線は透過*/
+}
+
+.header-hamburger.active div:nth-of-type(3) {
+    transform: translate(-50%, 0rem) rotate(45deg);
+    background-color: white;
+}
+
+/* // モーダル */
+.header-modal-bg {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: black;
+    z-index: 999;
+    animation-name: show;
+    animation-duration: 0.5s;
+    opacity: 0.8;
+}
+
+.header-modal-content {
+    color: white;
+    position: fixed;
+    z-index: 99999;
+    width: 50%;
+    height: 100vh;
+    background-color: #9ACD32;
+    overflow: scroll;
+    transition: 0.5s;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+/* 後付けクラス（jq） */
+.header-slide-in-left {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.header-modal-menu-list {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.header-modal-menu-list li {
+    margin-bottom: 6rem;
+}
+.header-modal-menu-list li a{
+  color:white;
+  font-weight: bold;
+}
+
+.header-modal-contact {
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header-modal-contact a {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.header-modal-contact a:hover {
+    opacity: 1;
+}
+
+
+
+}

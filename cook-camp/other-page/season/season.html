@@ -5,15 +5,86 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="../../header.css">
     <link rel="stylesheet" href="./season.css" />
     <link rel="stylesheet" href="./responsive.css">
     <title>旬の野菜</title>
   </head>
   <body>
-    <header>
-      <a href="../../cookcamp.html">トップへ戻る</a>
-    </header>
-    <div class="container">
+      <header id="header">
+        <div id="header-contents">
+          <div id="header-top">
+            <h1>
+              <a href="#">
+                <img src="../../images/structure/logo.png" alt="タイトル" />
+              </a>
+            </h1>
+            <form>
+              <input
+                id="sbox"
+                name="s"
+                type="search"
+                placeholder="料理名・食材名で検索"
+              />
+              <input id="sbtn" type="submit" value="レシピ検索" />
+            </form>
+          </div>
+          <p id="title">誰でも作れる簡単料理レシピ掲載サイト</p>
+          <nav>
+            <ul>
+              <li><a href="../../cookcamp.html">トップ</a></li>
+              <li>
+                <a href="#works">新着レシピ</a>
+              </li>
+              <li>
+                <a href="#works">定番レシピ</a>
+              </li>
+              <li>
+                <a href="#skills">旬の野菜</a>
+              </li>
+              <li>
+                <a href="#contact">旬の料理特集</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- ハンバーガーメニュー -->
+      <div class="hamburger-wrap">
+        <a class="header-hamburger" id="header-hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </a>
+      </div>
+
+      <div class="header-modal-bg" id="header-modal-bg"></div>
+      <div class="header-modal-content">
+        <ul class="header-modal-menu-list">
+          <li><a href="../../cookcamp.html">トップ</a></li>
+          <li>
+            <a href="#works">新着レシピ</a>
+          </li>
+          <li>
+            <a href="#works">定番レシピ</a>
+          </li>
+          <li>
+            <a href="#skills">旬の野菜</a>
+          </li>
+          <li>
+            <a href="#contact">旬の料理特集</a>
+          </li>
+        </ul>
+        <div class="header-modal-contact">
+          <a href="https://twitter.com/ryo18429659" target="_blank"
+            ><i class="fab fa-twitter-square fa-2x"></i
+          ></a>
+          <a class="btn">
+            <i class="fas fa-envelope fa-2x mail-btn"></i>
+          </a>
+        </div>
+      </div>
+      </header>
+    <main class="container">
       <section>
         <div class="section-title spring">
           <h2>春に旬の主な野菜</h2>
@@ -1491,8 +1562,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </main>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="./season.js"></script>
+    <script src="../../header.js"></script>
   </body>
 </html>

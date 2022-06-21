@@ -1,13 +1,15 @@
 @charset "UTF-8";
 html{
-    font-size: 100%;
+    font-size: 10px;
 }
 body{
-    font-size: 0.9rem;
     background-color: #F5F5DC;
 }
+p,a,h2{
+    font-size: 1.44rem;
+}
 img{
-    max-width: 100%;
+    vertical-align: bottom;
 }
 a:hover{
     font-weight: bold;
@@ -34,96 +36,51 @@ article{
 
         /*文字系*/
         
-#title{
-    color:#663300;
-}
-#header nav ul li{
-    color:#663300;
-}
 .sub-title{
     background-color: #9ACD32;
     color: white;
     border-radius: 30px;
     padding:5px 20px;
-    display: flex;
     align-items: center;
     font-weight: bold;
+    display: flex;
+}
+.sub-title .sub-title-text h2{
+    font-weight: bold;
+    display: inline-block;
 }
 .sub-title img{
     padding-right: 7px;
+    width: 2.3rem;
+    height: auto;
+}
+.read-more a{
+    display: inline-block;
+    padding-left: 1.4rem;
+    line-height: 1.6em;
+    background: url(../images/icon/arrow.png) left 0 top 50% no-repeat;
+    background-size: 13px auto;
+    color: #FF9900;
+    padding-right: 1rem;
 }
 
-.read-more p{
-	line-height: 1.6em;
-	background: url(images/icon/arrow.png) right 75px top 4.8px no-repeat;
-	background-size: 13px auto;
-	color:#FF9900;
-	text-align: right;
-}
-
-#side-left ul li{
+#side-left ul li a{
     padding-left: 20px;
 	line-height: 1.6em;
-	background: url(images/icon/arrow.png) left 0px top 11px no-repeat;
+	background: url(../images/icon/arrow.png) left 0px top 50% no-repeat;
 	background-size: 12.5px auto;
+    color: #663300;
 }
 .easy-recipes-text h3{
     color:#663300;
     font-weight: bold;
     margin-bottom: 15px;
+    font-size: 1.44rem;
 }
         /*文字系　ここまで*/
-        
-        /*ヘッダー*/
-#header{
-    width:100%;
-    background-color: white;
-    border-bottom: 2px solid #DDDDDD;
-    padding:5px;
+main{
+    padding:0 2rem;
 }
-#header #header-contents{
-    max-width: 960px;
-    margin: 0px auto;
-    font-size: 0.9rem;
-}
-#header #header-top{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-#header #header-top form{
-    height: 25px;
-    font-size: 0.7rem;
-}
-#header #header-top #sbox{
-    border: 1px solid rgb(200,200,200);
-    padding:4px;
-    width:190px;
-    height: 25px;
-    font-size: 0.7rem;
-}
-#header #header-top #sbtn{
-    border: 1px solid rgb(200,200,200);
-    padding:5px;
-    background-color: rgb(247,247,247);
-    height: 25px;
-}
-#header nav{
-    margin-top: 10px;
-}
-#header nav ul{
-    display: flex;
-}
-#header nav ul li{
-    width:20%;
-    text-align: center;
-}
-#header nav ul li:not(:last-child){
-    border-right: 1px solid #DDDDDD;
-}
-        /*ヘッダー　ここまで*/
-    
-        
         /*メインビジュアル*/
 #main-visual{
     padding:0;
@@ -133,7 +90,29 @@ article{
     width:100%;
 }
         /*メインビジュアル　ここまで*/
-        
+
+        /* レスポンシブ時の要素 */
+.res-search{
+    display: none;
+    margin-bottom: 1.5rem;
+}
+.res-search #sbox{
+    width: 76%;
+    height: 5rem;
+    font-size: 2rem;
+    padding: 0 1rem;
+    border: 1px solid #d6cfcf;
+    border-radius: 1rem;
+}
+.res-search #sbtn{
+    width: 23%;
+    height: 5rem;
+    background-color: #9ACD32;
+    color:white;
+    border: none;
+    border-radius: 1rem;
+}
+
         
         /*３カラムの位置関係*/
 #three-contents{
@@ -158,7 +137,7 @@ article{
     margin-bottom: 7px;
 }
 #side-left ul li{
-    line-height: 250%;
+    line-height: 3.75rem;
 }
 #side-left ul li:not(:last-child){
     border-bottom: 1.5px dashed #CCCCCC;
@@ -175,15 +154,25 @@ article{
     display: flex;
     justify-content: space-between;
 }
-#main-contents #new-recipes ul li{
-    width:19%;
-    text-align: center;
+#main-contents #new-recipes ul a:hover{
+    opacity: 0.7;
 }
 #main-contents #new-recipes ul li p{
     font-size: 0.3rem;
     margin-top: 3px;
     white-space: nowrap;
 }
+
+.slick-area {
+    margin: 30px auto 0;
+}
+.slick-area .slick-list {
+padding: 0 20% 0 0!important;
+}
+.slick-area li {
+margin: 0 0.5%;
+}
+
 /*上段ここまで*/
 
 /*中段*/
@@ -205,6 +194,14 @@ article{
 #main-contents #japanese-food-text p{
     margin-bottom: 10px;
 }
+#japanese-food .read-more p{
+    text-align: right;
+}
+#main-contents #japanese-food-contents p,
+#main-contents #easy-recipes .easy-recipes-contents .easy-recipes-text
+{
+    line-height: 1.7rem;
+}
 /*中断ここまで*/
 
 /*下段*/
@@ -213,7 +210,11 @@ article{
     justify-content: space-around;
 }
 #main-contents #easy-recipes{
-    padding-bottom: 5px;
+    padding-bottom: 0;
+}
+#main-contents #easy-recipes .read-more{
+    padding-bottom: 2.5rem;
+    text-align: right;
 }
 #main-contents #easy-recipes .easy-recipes-contents .easy-recipes-text{
     width:50%;
@@ -233,8 +234,14 @@ article{
         /*メインコンテンツ（真ん中）ここまで*/
         
         /*サイド（右）*/
+#side-right aside{
+    background-color: white;
+}
 #side-right img{
     width:100%;
+}
+#side-right a:hover{
+    opacity: 0.8;
 }
 
         /*サイド（右）ここまで*/
