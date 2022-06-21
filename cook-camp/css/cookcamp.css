@@ -103,6 +103,7 @@ main{
     padding: 0 1rem;
     border: 1px solid #d6cfcf;
     border-radius: 1rem;
+    background-color: white;
 }
 .res-search #sbtn{
     width: 23%;
