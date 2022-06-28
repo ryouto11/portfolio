@@ -97,7 +97,7 @@ main{
     margin-bottom: 1.5rem;
 }
 .res-search #sbox{
-    width: 76%;
+    width: 83%;
     height: 5rem;
     font-size: 2rem;
     padding: 0 1rem;
@@ -106,12 +106,13 @@ main{
     background-color: white;
 }
 .res-search #sbtn{
-    width: 23%;
+    width: 15%;
     height: 5rem;
     background-color: #9ACD32;
     color:white;
     border: none;
     border-radius: 1rem;
+    font-size: 2rem;
 }
 
         
@@ -225,6 +226,7 @@ margin: 0 0.5%;
 }
 #main-contents #easy-recipes .easy-recipes-contents img{
     width:45%;
+    aspect-ratio: 2 / 1.3;
 }
 #main-contents #easy-recipes .read-more p{
     padding:10px 0;

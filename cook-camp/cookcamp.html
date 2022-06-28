@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/responsive.css" />
     <link rel="stylesheet" href="./css/slick.css">
     <link rel="stylesheet" href="./css/slick-theme.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"/>
     <link rel="shortcut icon" href="images/icon/favicon.ico" />
   </head>
   <body>
@@ -29,7 +30,7 @@
               type="search"
               placeholder="料理名・食材名で検索"
             />
-            <input id="sbtn" type="submit" value="レシピ検索" />
+            <input id="sbtn" class="fas" type="submit" value="&#xf002; 検索"/>
           </form>
         </div>
         <p id="title">誰でも作れる簡単料理レシピ掲載サイト</p>
@@ -37,16 +38,16 @@
           <ul>
             <li>トップ</li>
             <li>
-              <a href="#">新着レシピ</a>
+              <a href="./other-page/new-recipe/new-recipe.html">新着レシピ</a>
             </li>
             <li>
-              <a href="#">定番レシピ</a>
+              <a href="./other-page/classic-recipe/classic.html">定番レシピ</a>
             </li>
             <li>
               <a href="./other-page/season/season.html">旬の野菜</a>
             </li>
             <li>
-              <a href="#">旬の料理特集</a>
+              <a href="./other-page/spring-vegetable-recipe/spring-vegetable-recipe.html">旬の料理レシピ</a>
             </li>
           </ul>
         </nav>
@@ -64,10 +65,10 @@
       <div class="header-modal-content">
         <ul class="header-modal-menu-list">
           <li>
-            <a href="#about">トップ</a>
+            <a href="#">トップ</a>
           </li>
           <li>
-            <a href="#works">新着レシピ</a>
+            <a href="./other-page/new-recipe/new-recipe.html">新着レシピ</a>
           </li>
           <li>
             <a href="#works">定番レシピ</a>
@@ -76,10 +77,13 @@
             <a href="./other-page/season/season.html">旬の野菜</a>
           </li>
           <li>
-            <a href="#contact">旬の料理特集</a>
+            <a href="./other-page/spring-vegetable-recipe/spring-vegetable-recipe.html">旬の料理レシピ</a>
           </li>
         </ul>
       </div>
+      <nav class="breadcrumb">
+        <span class="breadcrumb-item">トップページ</span>
+      </nav>
     </header>
     <main>
       <div id="main-visual" class="wrapper">
@@ -92,7 +96,7 @@
           type="search"
           placeholder="料理名・食材名で検索"
         />
-        <input id="sbtn" type="submit" value="レシピ検索" />
+        <input id="sbtn" class="fas" type="submit" value="&#xf002;"/>
       </form>
       <div id="three-contents" class="wrapper">
         <div id="side-left">
@@ -196,20 +200,20 @@
               簡単！おすすめレシピ
             </h2>
             <div class="easy-recipes-contents">
-              <img src="images/contents/pushRecipes1.jpg" alt="料理の写真" />
+              <img src="./other-page/spring-vegetable-recipe/spring-vegetable-recipe-img/SAWA_satoimotonjiruyutuke_TP_V.jpg" alt="料理の写真" />
               <div class="easy-recipes-text">
                 <h3>季節の食材〜春〜</h3>
                 <p class="first">
-                  新玉ねぎに春キャベツ、新じゃが、山菜などなど・・・春の野菜は風位がよくみずみずしいのが特徴です。
+                  　新玉ねぎに春キャベツ、新じゃが、山菜などなど・・・春の野菜は風味がよくみずみずしいのが特徴です。
                 </p>
                 <p>それでは春野菜を使ったレシピを紹介しましょう。</p>
               </div>
             </div>
             <div class="read-more">
-              <a href="#">続きを読む</a>
+              <a href="./other-page/spring-vegetable-recipe/spring-vegetable-recipe.html">続きを読む</a>
             </div>
             <div class="easy-recipes-contents">
-              <img src="images/contents/pushRecipes2.jpg" alt="料理の写真" />
+              <img src="./other-page/new-recipe/img/0adpDSC_9906.jpg" alt="料理の写真" />
               <div class="easy-recipes-text">
                 <h3>春野菜を食べて花粉症予防？！</h3>
                 <p class="first">
@@ -219,7 +223,7 @@
               </div>
             </div>
             <div class="read-more">
-              <a href="#">続きを読む</a>
+              <a href="./other-page/new-recipe/new-recipe.html">続きを読む</a>
             </div>
           </article>
         </div>
