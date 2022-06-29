@@ -32,7 +32,7 @@ a {
 a,
 p {
     letter-spacing: 2px;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
 }
 
 /* ローディングアニメーション */
@@ -453,7 +453,7 @@ main {
 }
 
 .about-text p {
-    line-height: 2em;
+    line-height: 3rem;
 }
 
 .main-text {
@@ -463,6 +463,9 @@ main {
 .about-skills {
     width: 60%;
     margin: 0 auto;
+}
+.about-skills p{
+    line-height: 3rem;
 }
 
 .sub-logo {
@@ -476,9 +479,6 @@ main {
     margin: 15px 0;
 }
 
-#skills-text {
-    line-height: 2rem;
-}
 
 #skills-text span {
     color: red;
@@ -734,15 +734,20 @@ footer .nav ul li {
 footer {
     position: relative;
     padding: 0 2rem;
-    height: 6rem;
+    height: 8rem;
     background-color: grey;
     z-index: 2;
 }
 
 footer p {
     color: white;
-    line-height: 6rem;
+    line-height: 8rem;
     font-weight: bold;
+}
+footer > div{
+    position: absolute;
+    right:0;
+    bottom:0;
 }
 
 footer .scroll-top-btn {
