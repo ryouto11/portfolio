@@ -442,13 +442,10 @@ main {
     text-align: center;
     letter-spacing: 10px;
     font-weight: bold;
-    text-shadow:-1px -1px 0 #000 ,4px 5px 0 #000;
-    color: #000;
-    color:rgb(255, 255, 255);
+    text-shadow:-1px -1px 0 #000 ,2px 3px 0 #000;
+    color: rgb(255, 255, 255);
     text-stroke:1px #000;
     -webkit-text-stroke:1px rgb(0, 0, 0);
-}
-.about-wrapper .section-title{
 }
 
 #about-contents {
