@@ -25,21 +25,21 @@ $(function() {
   });
 
 // 下部の固定ボタンの表示の設定
-const scroll = $(window).scrollTop();
-const windowHeight = $(window).height();
-  $(window).on('load resize scroll', function() {
-    const elemPos = $(".story_contents-bottom--text").offset().top-50;
-    if($(window).width() < 768){
-        if (scroll >= elemPos - windowHeight){
-          $(".play-btn").fadeIn();
-        }else{
-          $(".play-btn").fadeOut();
-        }
-    }
-    else{
-      $(".play-btn").fadeOut();
-    }
-  });
+// $(window).on('load resize scroll', function() {
+//     const scroll = $(window).scrollTop();
+//     const windowHeight = $(window).height();
+//     const elemPos = $(".story_contents-bottom--text").offset().top-50;
+//     if($(window).width() < 768){
+//         if (scroll >= elemPos - windowHeight){
+//           $(".play-btn").fadeIn();
+//         }else{
+//           $(".play-btn").fadeOut();
+//         }
+//     }
+//     else{
+//       $(".play-btn").fadeOut();
+//     }
+//   });
 });
 
 // スムーススクロールの設定
