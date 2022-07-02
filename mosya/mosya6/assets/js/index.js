@@ -25,13 +25,12 @@ $(function() {
   });
 
 // 下部の固定ボタンの表示の設定
+const scroll = $(window).scrollTop();
+const windowHeight = $(window).height();
   $(window).on('load resize scroll', function() {
+    const elemPos = $(".story_contents-bottom--text").offset().top-50;
     if($(window).width() < 768){
-      const elemPos = $(".story_contents-bottom--text").offset().top-50;
-      const scroll = $(window).scrollTop();
-      const windowHeight = $(window).height();
         if (scroll >= elemPos - windowHeight){
-          if(innerWidth)
           $(".play-btn").fadeIn();
         }else{
           $(".play-btn").fadeOut();

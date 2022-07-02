@@ -756,11 +756,6 @@ footer p {
     line-height: 8rem;
     font-weight: bold;
 }
-footer > div{
-    position: absolute;
-    right:0;
-    bottom:0;
-}
 
 footer .scroll-top-btn {
     display: inline-block;
