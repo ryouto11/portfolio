@@ -6,6 +6,7 @@ body{
 }
 img{
     max-width: 100%;
+    object-fit: cover;
 }
 .wrapper{
     max-width: 960px;
@@ -64,6 +65,10 @@ h1{
 }
 #works ul li{
     width:31%;
+}
+#works ul li img{
+    width: 100%;
+    height: 180px;
 }
 #works ul li:nth-child(n+4) {
   margin-top: 30px;
@@ -152,6 +157,9 @@ footer p{
     }
     #works ul li{
         width:100%;
+    }
+    #works ul li img{
+        height: 400px;
     }
      #works ul li:not(:first-child){
          margin-top: 30px;

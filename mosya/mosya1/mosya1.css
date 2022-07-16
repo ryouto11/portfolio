@@ -5,6 +5,7 @@ body{
 }
 img{
     max-width: 100%;
+    object-fit: cover;
 }
 #main-visual img{
      width: 100%;
@@ -86,7 +87,8 @@ header ul li a:hover{
     width:32%;
 }
 #bicycle ul li img{
-    max-width:100%;
+    width:100%;
+    height:200px;
 }
 
 .bicycle-img {
@@ -109,7 +111,7 @@ header ul li a:hover{
 
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
 	/* 480px以下に適用されるCSS（スマホ用） */
 	#about-contents {
     display: flex;
@@ -122,6 +124,11 @@ header ul li a:hover{
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
-
+}
+#bicycle ul li{
+    width:100%;
+}
+#bicycle ul li img{
+    height:350px;
 }
 }
