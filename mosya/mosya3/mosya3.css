@@ -101,19 +101,17 @@ img{
 
 #pickup{
     margin-bottom: 50px;
-}
-#pickup ul{
     display: flex;
     justify-content: space-between;
 }
-#pickup ul li{
+#pickup article{
     width:32%;
 }
-#pickup ul li img{
-    width: 370px;
-    height:250px;
+#pickup article img{
+    width: 100%;
+    aspect-ratio: 1.8 / 1;
 }
-#pickup ul li h3{
+#pickup article h3{
     margin:20px 0 25px 0;
 }
 
@@ -141,7 +139,7 @@ img{
 #main-area img{
     margin-bottom: 15px;
     width: 100%;
-    height: 500px;
+    aspect-ratio: 1.8 / 1;
 }
 #main-area .main-text{
     width:90%;
@@ -169,12 +167,12 @@ img{
 #side-area .side-and-footer-section-title{
     text-align: center;
 }
-#side-area #ranking .ranking-list li{
+#side-area #ranking article{
     margin-bottom: 20px;
 }
-#side-area #ranking .ranking-list li img{
+#side-area #ranking article img{
     width: 100%;
-    height: 245px;
+    aspect-ratio: 1.8 / 1;
 }
 
 #side-area #archive li{
@@ -234,10 +232,10 @@ footer p,li{
     nav{
         overflow-x: auto;
     }
-    #pickup ul{
+    #pickup{
         flex-direction: column;
     }
-    #pickup ul li{
+    #pickup article{
         width:100%;
     }
     #all-area{
